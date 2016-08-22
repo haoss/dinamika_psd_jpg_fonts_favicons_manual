@@ -1,8 +1,62 @@
 /* header */
 .header
-  background-color: $color-gray
-  height: 100px
+  background:
+    color: $color-black
+    position: top center
+    repeat: no-repeat
+    size: cover
+    image: url('../img/header.png')
+  height: 164px
 
-  ul
-    li
-      display: inline
+  &__top
+    position: relative
+    color: $color-red
+    font-size: rem(16)
+    text-align: center
+    height: 74px
+    font-family: $font-dejavu-cond-bold
+    padding-top: 15px
+    &::after, &::before
+      content: ''
+      position: absolute
+      bottom: 0
+      height: 1px
+      width: calc(50% - 71px)
+      background-color: $color-red
+      left: 0
+    &::after
+      left: inherit
+      right: 0
+
+  &__logo
+    position: absolute
+    width: 142px
+    top: 43px
+    left: 50%
+    margin-left: -71px
+    img
+      display: block
+      max-width: 100%
+
+  &__mail
+    display: none
+    float: left
+    line-height: 1
+    a
+      color: $color-red
+      text-decoration: none
+    i
+      font-size: rem(15)
+      margin-right: 10px
+
+  &__phone
+    line-height: 1
+    a
+      color: $color-red
+      text-decoration: none
+    i
+      font-size: rem(15)
+      margin-right: 10px
+
+  &__bottom
+    padding-top: 45px

@@ -1,1 +1,44 @@
 /* modules */
+
+/* news */
+.news
+  &__img
+    position: relative
+    overflow: hidden
+    margin-bottom: 20px
+    box-shadow: 0 0 3px $color-red inset
+    background-color: $color-red
+    &::before
+      content: ''
+      position: absolute
+      z-index: 20
+      top: 0
+      left: 0
+      width: 100%
+      height: 3px
+      background-color: $color-red
+    img
+      transform: scale(1)
+      position: relative
+      z-index: 10
+      transition: all 0.3s linear
+      opacity: 1
+    &:hover
+      img
+        transform: scale(1.1)
+        will-change: transform
+        opacity: 0.7
+
+  &__block
+    font-size: rem(13)
+    margin-bottom: 55px
+    h2
+      margin-bottom: 7px
+    p
+      margin-bottom: 0
+
+  &__time
+    margin-bottom: 10px
+    font-size: rem(10)
+    strong
+      font-size: rem(12)

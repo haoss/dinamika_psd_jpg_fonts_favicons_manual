@@ -47,22 +47,180 @@
 
 /*==========  Mobile First Method  ==========*/
 
+@media only screen and (min-width : 0px) and (max-width: 767px)
+
+  .content
+    &__head
+      &--top
+        padding: 0
+        margin: 0 auto
+        width: 90%
+        .h1, h1
+          padding: 0
+          margin: 0
+        &::after
+          display: none
+    &__top
+      .container
+        padding-left: 0
+        padding-right: 0
+
+  .navigation
+    position: absolute
+    z-index: 200
+    width: 270px
+    left: 50%
+    margin-left: -135px
+    background-color: $color-red
+    padding: 5px
+    top: 155px
+    display: none
+    opacity: 0
+    animation: open 0.5s ease-in-out forwards
+    &::before
+      content: ''
+      position: absolute
+      top: -11px
+      left: 50%
+      transform: translateX(-50%)
+      width: 0
+      height: 0
+      border-left: 11px solid transparent
+      border-right: 11px solid transparent
+      border-bottom: 11px solid $color-red
+    &>ul
+      border: 1px solid rgba($color-white, 0.5)
+      padding: 10px 0
+      &>li
+        &>a, &>span
+          padding: 0 25px
+          height: 34px
+          line-height: 34px
+          &:hover
+            color: $color-darkgray
+        &.active
+          &>a, &>span
+            color: $color-darkgray
+
+    &__row
+      &.open
+        .navigation
+          display: block
+          opacity: 1
+        .btn--mobile
+          color: $color-red
+          strong
+            color: $color-red
+
+  .btn
+    &--mobile
+      display: block
+
+
+
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px)
-  /**/
+  .container
+    width: 320px
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px)
-  /**/
+  .container
+    width: 480px
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px)
-  /**/
+  .container
+    width: 750px
+
+  .footer
+    min-height: inherit
+    height: 76px
+    &__body
+      display: flex
+      height: 76px
+      align-items: center
+      &>div
+        margin: 0
+        &:first-child
+          order: 2
+          min-width: 280px
+        &:nth-child(2)
+          order: 1
+          text-align: right
+          width: calc(100% - 280px / 2)
+          padding-right: 15px
+        &:last-child
+          order: 3
+          text-align: left
+          width: calc(100% - 280px / 2)
+          padding-left: 15px
+          margin-bottom: 0
+    &__logo
+      margin: -46px auto 0 auto
+
+  .header
+    height: 138px
+    &__top
+      height: 48px
+    &__phone
+      float: right
+    &__mail
+      display: block
+    &__logo
+      top: 18px
+
+  .navigation
+    &>ul
+      text-align: center
+      font-size: rem(15)
+      &>li
+        display: inline-block
+        &>a, &>span
+          padding: 0 12px
+          &:hover
+            color: $color-red
+        &.active
+          &>a,&>span
+            color: $color-red
+
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
-  /**/
+  .container
+    width: 970px
+
+  .footer
+    &__body
+      &>div
+        &:nth-child(2)
+          text-align: left
+        &:last-child
+          text-align: right
+
+  .header
+    height: 168px
+    &__logo
+      width: 256px
+      margin-left: -128px
+      top: 44px
+
+  .navigation
+    &>ul
+      margin-left: -10px
+      &>li
+        &:nth-child(4)
+          margin-left: 265px
+    &__row
+      margin: 0 auto
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
-  /**/
+  .container
+    width: 1170px
+
+  .navigation
+    &>ul
+      &>li
+        &:nth-child(4)
+          margin-left: 315px

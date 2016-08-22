@@ -23,3 +23,32 @@
     color: #333
     background-color: $color-white
     border-color: $color-gray
+
+  &--mobile
+    background-color: transparent
+    padding: 0
+    margin: 0
+    border-radius: 0
+    color: $color-white
+    line-height: 1
+    border: 0
+    display: block
+    position: absolute
+    top: 120px
+    left: 50%
+    transform: translateX(-50%)
+    transition: color 0.5s ease-in-out
+    display: none
+
+    strong
+      font-size: rem(19)
+      text-transform: uppercase
+      font-family: $font-sportword
+      color: #e6e9ec
+      transition: color 0.5s ease-in-out
+
+    .ion-navicon-round
+      margin-right: 10px
+      font-size: rem(21)
+      position: relative
+      top: 1px

@@ -1,4 +1,29 @@
 /* footer */
 .footer
-  background-color: $color-gray
-  height: 100px
+  background-color: $color-red
+  min-height: 146px
+  color: $color-white
+  font-family: $font-sportword
+  font-size: rem(12)
+  text-align: center
+  text-transform: uppercase
+
+  a
+    text-decoration: none
+    color: $color-white
+    &:hover
+      text-decoration: underline
+
+  &__body
+    &>div
+      margin-bottom: 5px
+      &:last-child
+        margin-bottom: 10px
+
+  &__logo
+    margin-top: -35px
+    margin-bottom: 15px
+
+  .ion-heart
+    font-size: rem(16)
+    margin: 0 5px

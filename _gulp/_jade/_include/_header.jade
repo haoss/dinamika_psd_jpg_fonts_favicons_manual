@@ -1,15 +1,37 @@
 // Header
 header.header
-  .container
-    
-    -var navigation = { 'Главная': '#', 'О нас': '#', 'Продукция': '#', 'Сотрудничество': '#', 'Наши магазины': '#', 'Контакты': '#'};
-    
-    nav.navigation(role="navigation")
-      ul
-        each val, key in navigation
-          if active === key
-            li.active
-              a(href=val, title=key)= key
-          else
-            li
-              a(href=val, title=key)= key
+  
+  .header__top
+    .container
+      
+      .header__logo
+        a(href="#")
+          img(src="./img/logo.png", alt="")
+      
+      .header__mail 
+        i.ion-ios-email
+        a(href="mailto:info@dinamika.ru") info@dinamika.ru
+      
+      .header__phone
+        i.ion-android-call
+        a(href="callto:+74998887667") +7 499 888 76 67
+  
+  .header__bottom
+    .container
+      
+      -var navigation = { 'О компании': '#', 'Автопарк': '#', 'Цены': '#', 'Услуги': '#', 'Условия': '#', 'Контакты': '#'};
+      
+      .navigation__row
+        button(type="button" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false").btn.btn--mobile
+          i.ion-navicon-round
+          strong Меню сайта
+        
+        nav#navigation.navigation(role="navigation")
+          ul
+            each val, key in navigation
+              if active === key
+                li.active
+                  a(href=val, title=key)= key
+              else
+                li
+                  a(href=val, title=key)= key

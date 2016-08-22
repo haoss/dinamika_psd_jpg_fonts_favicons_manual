@@ -10,24 +10,6 @@ $(document).ready(function(){
     });
   };
 
-  // E-mail Ajax Send
-  // Documentation & Example: https://github.com/agragregra/uniMail
-  $("form").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: "mail.php", //Change
-      data: th.serialize()
-    }).done(function() {
-      alert("Thank you!");
-      setTimeout(function() {
-        // Done Functions
-        th.trigger("reset");
-      }, 1000);
-    });
-    return false;
-  });
-
   // Magnific popup gallery
   $('.gallery').each(function() {
     $(this).magnificPopup({
@@ -73,6 +55,12 @@ $(document).ready(function(){
     preloader: false,
     fixedContentPos: false
   });
+
+  // Ol list number
+  $('ol.list li').each(function(){
+    $(this).prepend('<span class="before">' + ($(this).index() + 1) + '</span>');
+  });
+
 
   // Chrome Smooth Scroll
   try {
