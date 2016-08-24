@@ -101,7 +101,6 @@
         &.active
           &>a, &>span
             color: $color-darkgray
-
     &__row
       &.open
         .navigation
@@ -116,7 +115,13 @@
     &--mobile
       display: block
 
-
+  .contacts
+    &__info
+      &__body
+        &>div
+          &:not(:last-child)
+            .contacts__block
+              margin-bottom: 20px
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px)
@@ -127,6 +132,86 @@
 @media only screen and (min-width : 480px)
   .container
     width: 480px
+
+  .header
+    &__top
+      font-size: rem(12)
+
+  .pagination
+    ul
+      &>li
+        &.prev, &.next
+          width: auto
+        &.prev
+          float: left
+        &.next
+          float: right
+
+  .form-checkbox__row
+    text-align: left
+    margin-bottom: 0
+    margin-top: 3px
+    padding-left: 6px
+    .required-info
+      &::after
+        left: 5px
+  .btn
+    &--contacts
+      float: right
+
+  .contacts__map
+    padding-bottom: 620px
+
+  .about
+    margin-top: -475px
+    margin-bottom: 45px
+    &__block
+      width: 210px
+      height: 210px
+      padding-top: 35px
+      font-size: rem(13)
+      &::after
+        top: 5px
+        left: 5px
+        right: 5px
+        bottom: 5px
+      img
+        max-height: 95px
+
+  .content
+    &__top
+      &--about
+        padding-bottom: 470px
+
+  .prices
+    &__block
+      text-align: left
+      &__body
+        display: table
+        width: 100%
+        margin: 0 auto
+        max-width: 530px
+        &>div
+          display: table-cell
+          vertical-align: middle
+          height: 125px
+          &:last-child
+            text-align: right
+    &__img
+      margin: 0
+    &__header
+      &--last
+        margin-top: 50px
+
+@media (min-width: 468px) and (max-width: 767px)
+  .col
+    &-480-5, &-480-6, &-480-7
+      width: 41.66666667%
+      float: left
+    &-480-6
+      width: 50%
+    &-480-7
+      width: 58.33333333%
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px)
@@ -184,6 +269,69 @@
           &>a,&>span
             color: $color-red
 
+  .contacts
+    &__info
+      padding-top: 20px
+      padding-bottom: 20px
+      &__body
+        max-width: inherit
+        display: table
+        width: 100%
+        &>div
+          display: table-cell
+          height: 104px
+          vertical-align: middle
+          width: 33.3%
+          &:not(:first-child)
+            border-left: 1px solid $color-white
+    &__block
+      margin: 0 auto
+    &__map
+      padding-bottom: 650px
+    &__logo
+      max-width: 277px
+      margin-top: 80px
+
+  .form
+    &__body
+      margin-left: auto
+      margin-right: auto
+      margin-top: 235px
+      padding-left: 27px
+      padding-right: 27px
+
+  .content
+    &__top
+      &--about
+        padding-bottom: 200px
+
+  .about
+    margin-top: -195px
+    margin-bottom: 70px
+    &__block
+      width: 158px
+      height: 158px
+      padding-top: 25px
+      font-size: rem(10)
+      margin-bottom: 0 !important
+      img
+        max-height: 75px
+        margin-bottom: 10px
+
+  .prices
+    &__block
+
+
+@media (min-width : 768px) and (max-width: 991px)
+  .contacts
+    &__block
+      &>div
+        &:first-child
+          display: none
+
+  .contacts__block
+    &>div:not(:first-child)
+      padding-left: 0
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
@@ -214,6 +362,44 @@
     &__row
       margin: 0 auto
 
+  .contacts
+    &__block
+      &>div
+        padding: 0 10px !important
+    &__map
+      padding-bottom: 550px
+    &__logo
+      margin-top: 180px
+
+  .form
+    &__body
+      margin-top: 135px
+      padding-bottom: 35px
+      max-width: inherit
+
+  .about
+    margin-top: -215px
+    margin-bottom: 70px
+    &__block
+      width: 213px
+      height: 213px
+      padding-top: 35px
+      font-size: rem(12)
+      img
+        max-height: 100px
+        margin-bottom: 15px
+
+  .prices
+    &__header
+      text-align: left
+      &--last
+        margin-top: 0
+    &__block
+      padding-top: 7px
+      padding-bottom: 7px
+      &__body
+        max-width: inherit
+
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
   .container
@@ -224,3 +410,33 @@
       &>li
         &:nth-child(4)
           margin-left: 315px
+
+  .form
+    &__body
+      padding: 40px 48px 35px
+
+  .btn
+    &--contacts
+      margin-right: -10px
+
+  .about
+    margin-top: -215px
+    margin-bottom: 70px
+    &__block
+      width: 263px
+      height: 263px
+      padding-top: 45px
+      font-size: rem(15)
+      &::after
+        left: 7px
+        top: 7px
+        right: 7px
+        bottom: 7px
+      img
+        max-height: 125px
+        margin-bottom: 25px
+
+  .content
+    &__top
+      &--about
+        padding-bottom: 240px

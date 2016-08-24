@@ -52,3 +52,28 @@
       font-size: rem(21)
       position: relative
       top: 1px
+
+  &--right-small
+    @include sprite($btn-right-small)
+    line-height: 24px
+    border: 0
+    background-color: transparent
+    color: $color-white
+    font-size: rem(11)
+    text-transform: uppercase
+    font-family: $font-sportword
+    text-decoration: none
+    // transition: all 0.1s ease
+    &:hover, &:active, &:focus
+      @include sprite($btn-right-small-hover)
+      color: $color-white
+
+  &--contacts
+    display: block
+    margin: 0 auto
+
+  &--prices
+    @extend .btn--right-small
+    @include sprite($btn-left-small)
+    &:hover
+      @include sprite($btn-left-small-hover)

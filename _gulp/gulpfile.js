@@ -35,7 +35,7 @@ gulp.task('sprite-image', function () {
 
   // Pipe CSS stream through CSS optimizer and onto disk
   var cssStream = spriteData.css
-    .pipe(gulp.dest('./sass/1-base/'));
+    .pipe(gulp.dest('./_sass/1-base/'));
 
   // Return a merged stream to handle both `end` events
   return merge(imgStream, cssStream);

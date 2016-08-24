@@ -42,3 +42,175 @@
     font-size: rem(10)
     strong
       font-size: rem(12)
+
+/**/
+.contacts
+  &__info
+    height: auto
+    background-color: $color-lightgray
+    position: relative
+    z-index: 20
+    padding: 50px 10px
+
+    &__body
+      max-width: 270px
+      margin: 0 auto
+
+  &__bottom
+    background-color: $color-darkgray
+    min-height: 150px
+    top: -20px
+    margin-bottom: -20px
+    position: relative
+    z-index: 10
+
+  &__map
+    position: relative
+    padding-bottom: 710px
+    width: 100%
+
+    iframe
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+
+  &__block
+    display: table
+    font-family: $font-dejavu-cond-book
+    &>div
+      display: table-cell
+      vertical-align: top
+      &:not(:first-child)
+        padding-left: 15px
+    font-size: rem(13)
+    h4, .h4
+      margin-bottom: 5px
+    p
+      margin: 0
+
+  &__logo
+    max-width: 200px
+    margin: 90px auto 0
+
+  &__form
+    position: absolute
+    width: 100%
+    z-index: 10
+    height: 1px
+    // padding-top: 90px
+    &>.container
+      height: 1px
+    &__row
+      height: 1px
+      &>div
+        height: 1px
+
+/**/
+.about
+  margin-bottom: 65px
+  position: relative
+  z-index: 10
+  &>div
+    .about__block
+      margin-bottom: 25px
+
+  &__block
+    background:
+      color: $color-red
+      position: center
+      // size: cover
+      repeat: no-repeat
+      image: url('../img/about-pattern.png')
+    color: $color-white
+    text-align: center
+    font-family: $font-sportword
+    font-size: rem(15)
+    text-transform: uppercase
+    padding: 40px 10px 10px 10px
+    position: relative
+    width: 263px
+    height: 263px
+    margin-left: auto
+    margin-right: auto
+    position: relative
+
+    &::after
+      content: ''
+      position: absolute
+      top: 7px
+      left: 7px
+      right: 7px
+      bottom: 7px
+      border: 1px solid #e1ccc7
+
+    img
+      max-height: 125px
+      width: auto
+      margin-bottom: 20px
+    p
+      margin: 0
+
+/**/
+.prices
+  .container
+    width: auto
+    max-width: 1170px
+  &__header
+    text-align: center
+    &--last
+      margin-top: 25px
+
+  &__block
+    position: relative
+    font-size: rem(12)
+    text-align: center
+    margin-left: -15px
+    margin-right: -15px
+    padding: 10px 15px 20px 15px
+    color: $color-black
+    transition: background 0.5s ease
+    &:hover
+      background-color: $color-white !important
+      .link
+        background-color: rgba($color-white,.60)
+        .btn
+          opacity: 1
+    p
+      margin: 0
+    .link
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      z-index: 50
+      display: block
+      transition: background 0.5s ease
+      // background-color: rgba(pink,.60)
+      .btn
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        opacity: 0
+    &:nth-child(even)
+      background-color: $color-gray
+
+  &__title
+    color: $color-red
+    font-family: $font-sportword
+    font-size: rem(14)
+    text-transform: uppercase
+
+  &__img
+    max-width: 220px
+    max-height: 105px
+    margin-left: auto
+    margin-right: auto
+
+.price
+  font-size: rem(40)
+  font-family: $font-sportword
+  color: $color-red

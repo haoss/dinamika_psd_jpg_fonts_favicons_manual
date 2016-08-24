@@ -61,6 +61,13 @@ $(document).ready(function(){
     $(this).prepend('<span class="before">' + ($(this).index() + 1) + '</span>');
   });
 
+  // Required form check
+  $('.button-check-required').on('click', function(e){
+    e.preventDefault();
+    $('.form-check-required').each(function(){
+      $(this).toggleClass('has-error');
+    })
+  })
 
   // Chrome Smooth Scroll
   try {

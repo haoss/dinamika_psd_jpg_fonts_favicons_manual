@@ -1,1 +1,52 @@
 /* pagintaion */
+/**/
+.pagination
+  text-align: center
+  font-size: rem(16)
+  font-family: $font-dejavu-cond-book
+  ul
+    display: inline-block
+    margin: 0
+    padding: 0
+    &>li
+      display: inline
+      list-style: none
+      margin: 0
+      &.page
+        &>a, &>span
+          width: 37px
+          text-align: center
+        &>a
+          &:hover
+            border-color: $color-red
+            color: $color-red
+
+      &>a, &>span
+        display: inline-block
+        height: 37px
+        line-height: 37px
+        margin: 0 2px 25px 2px
+        color: $color-darkgray
+        text-decoration: none
+        border: 1px solid transparent
+
+      &.prev, &.next
+        width: 49%
+        display: inline-block
+        &>a, &>span
+          color: #969696
+          padding-left: 10px
+          padding-right: 10px
+          &:hover
+            color: $color-red
+      &.prev
+        text-align: right
+      &.next
+        text-align: left
+
+      &.active
+        &>a, &>span
+          background-color: $color-red
+          color: $color-white
+          &:hover
+            color: $color-white

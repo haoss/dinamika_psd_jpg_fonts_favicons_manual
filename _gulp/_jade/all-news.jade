@@ -90,13 +90,14 @@ html(lang="ru")
           // Pagination
           .pagination
             ul
-              li: a(href="#") Назад
-              li: a(href="#") 1
-              li.active: a(href="#") 2
-              li: a(href="#") 3
-              li: span ...
-              li: a(href="#") 99
-              li: a(href="#") Вперед
+              li.page: a(href="#") 1
+              li.page.active: a(href="#") 2
+              li.page: a(href="#") 3
+              li.page: span ...
+              li.page: a(href="#") 99
+              li.prev: a(href="#") Назад
+              li.next: a(href="#") Вперед
+              
     
     include ./_include/_footer
     //- div(style="height: 1000px; background-color: #000")
