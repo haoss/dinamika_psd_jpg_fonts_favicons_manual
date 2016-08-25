@@ -72,12 +72,15 @@ body
   text-transform: uppercase
   color: $color-red
   font-family: $font-sportword
+  margin-bottom: 15px
 
 .h5, h5
   font-size: rem(18)
+  margin-bottom: 15px
 
 .h6, h6
   font-size: rem(16)
+  margin-bottom: 15px
 
 .small, small
   font-size: rem(12)
@@ -241,7 +244,10 @@ a, .link
 
     &--contacts
       padding: 0
-      background-color: #dcdddd
+      background-color: $color-gray
+
+    &--autopark
+      padding: 0
 
   &__top
     background:
@@ -359,6 +365,11 @@ ol.list
     vertical-align: middle
     margin: 5px 0 0 0
     line-height: 1
+    &>a
+      color: #767a7b
+      text-decoration: none
+      &:hover
+        text-decoration: underline
     &+li:before
       content: "\f3d3"
       padding: 0 7px 0 5px
@@ -382,3 +393,9 @@ ol.list
   100%
     transform: translateY(0px)
     opacity: 1
+
+/**/
+.color
+  display: inline-block
+  &--red
+    color: $color-red !important

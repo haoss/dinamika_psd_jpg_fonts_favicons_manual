@@ -77,3 +77,10 @@
     @include sprite($btn-left-small)
     &:hover
       @include sprite($btn-left-small-hover)
+
+  &--big-order
+    @extend .btn--right-small
+    @include sprite($btn-right-big)
+    font-size: rem(21)
+    &:hover
+      @include sprite($btn-right-big-hover)

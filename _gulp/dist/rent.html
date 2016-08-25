@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Автопарк - Dinamika</title>
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- Old browser-->
+        <script>
+            var $buoop = {vs:{i:10,f:30,o:25,s:7},c:2}; 
+            function $buo_f(){ 
+             var e = document.createElement("script"); 
+             e.src = "http://browser-update.org/update.min.js"; 
+             document.body.appendChild(e);
+            };
+            try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
+            catch(e){window.attachEvent("onload", $buo_f)}
+            
+        </script>
+        <!-- Favicon-->
+        <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" href="./favicon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="./favicon/android-chrome-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="./favicon/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="./favicon/manifest.json">
+        <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="./favicon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-TileImage" content="./favicon/mstile-144x144.png">
+        <meta name="msapplication-config" content="./favicon/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        <!-- Jquery 3.1.0-->
+        <script src="./js/libs/jquery/jquery-3.1.0.min.js"></script>
+        <script src="./js/libs/jquery/jquery-migrate-3.0.0.min.js"></script>
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <!-- Preloader-->
+        <div class="loader">
+            <div class="loader__block"></div>
+        </div>
+        <!-- Header-->
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <div class="header__logo"><a href="#"><img src="./img/logo.png" alt=""></a></div>
+                    <div class="header__mail"> <i class="ion-ios-email"></i><a href="mailto:info@dinamika.ru">info@dinamika.ru</a></div>
+                    <div class="header__phone"><i class="ion-android-call"></i><a href="callto:+74998887667">+7 499 888 76 67</a></div>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="container">
+                    <div class="navigation__row">
+                        <button type="button" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="btn btn--mobile"><i class="ion-navicon-round"></i><strong>Меню сайта</strong></button>
+                        <nav id="navigation" role="navigation" class="navigation">
+                            <ul>
+                                <li><a href="#" title="О компании">О компании</a></li>
+                                <li class="active"><a href="#" title="Автопарк">Автопарк</a></li>
+                                <li><a href="#" title="Цены">Цены</a></li>
+                                <li><a href="#" title="Услуги">Услуги</a></li>
+                                <li><a href="#" title="Условия">Условия</a></li>
+                                <li><a href="#" title="Контакты">Контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Breadcrumbs-->
+        <div class="breadcrumbs">
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="ion-ios-home"></i></a></li>
+                    <li><a href="#">Автопарк </a></li>
+                    <li class="active">BMW 520</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Content-->
+        <div class="content">
+            <div style="background-image: url('./tmp/background/rent-auto.jpg')" class="content__top">
+                <div>
+                    <div class="container">
+                        <div class="content__head content__head--top">
+                            <div class="h1">АРЕНДА BMW 520</div>
+                        </div>
+                        <div class="hidden-xs">
+                            <p>DINAMIKA предлагает в прокат БМВ 5 серии – это роскошные и красивые авто, которые вы можете арендовать на любой срок. Мы рекомендуем эту машину и для частных поездок, и для решения вопросов с корпоративным трансфером. Сидеть за рулем данного автомобиля – одно удовольствие, и если вы еще не были владельцем роскошной модели 520, то после аренды BMW 5 уверены, что вам захочется иметь ее в своем автопарке. Трудно найти водителя, который бы не оценил все преимущества этой машины, сошедшей с конвейера известного немецкого концерна.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Content auto-->
+            <div class="content__auto">
+                <div class="container">
+                    <div class="auto__body">
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="auto__img"><img src="./tmp/cars/cars-1.png" alt="" class="img-responsive"></div>
+                                    <div class="auto__info">
+                                        <div> 
+                                            <svg id="icon-auto-info-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 13 15" width="13" height="15" class="icon">
+                                                <image width="13" height="15" xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEASABIAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAGVAAABqwAAAgf/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAA8ADQMBIgACEQEDEQH/ xACEAAEBAAAAAAAAAAAAAAAAAAADBgEBAQAAAAAAAAAAAAAAAAAABAUQAAEDBQEAAAAAAAAAAAAA AAEAAgQREhMUBRURAAECBAILAAAAAAAAAAAAAAECAwARMRIhFEFhgZEiMkITUwQFEgAABQUBAAAA AAAAAAAAAAAAARExEiFBcQIiMv/aAAwDAQACEQMRAAAAoCl2HY//2gAIAQIAAQUAyEr/2gAIAQMA AQUAEZrV/9oACAEBAAEFANuH1pWLg+sRQ3yLP//aAAgBAgIGPwBulVR//9oACAEDAgY/APRwPWMW Kt8j/9oACAEBAQY/AFK9t9tv57BKWmVrCC6vyKEwZDRHZBZymXuPGLC7fIY3VCYINRhgZjeIn0hF tByHZqrH/9k=" overflow="visible"></image>
+                                            </svg>4 двери
+                                        </div>
+                                        <div> 
+                                            <svg id="icon-auto-info-2" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 150 150" width="16" height="16" class="icon">
+                                                <g>
+                                                    <path d="M75 0C33.6 0 0 33.6 0 75s33.6 75 75 75 75-33.6 75-75S116.4 0 75 0zm0 133.4c-32.2 0-58.4-26.2-58.4-58.4S42.8 16.6 75 16.6s58.4 26.2 58.4 58.4-26.2 58.4-58.4 58.4zm0 0"></path>
+                                                    <path d="M110.3 48.2c-2.6 0-4.7 2.1-4.7 4.7v17.8H91.5V52.9c0-2.6-2.1-4.7-4.7-4.7s-4.7 2.1-4.7 4.7v17.8H67.9V52.9c0-2.6-2.1-4.7-4.7-4.7s-4.7 2.1-4.7 4.7v17.8H44.4V52.9c0-2.6-2.1-4.7-4.7-4.7S35 50.3 35 52.9v20.5c0 4.6 2.8 6.6 5.4 6.6h18.1v17c0 2.6 2.1 4.7 4.7 4.7s4.7-2.1 4.7-4.7V80H82v17c0 2.6 2.1 4.7 4.7 4.7s4.7-2.1 4.7-4.7V80h14.1v17c0 2.6 2.1 4.7 4.7 4.7s4.7-2.1 4.7-4.7V52.9c.1-2.6-2-4.7-4.6-4.7zm0 0"></path>
+                                                </g>
+                                            </svg>Автомат
+                                        </div>
+                                        <div> 
+                                            <svg id="icon-auto-info-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 120 150" width="11" height="14" class="icon">
+                                                <g id="g5">
+                                                    <g id="g7" transform="scale(.9975 1.00402)">
+                                                        <defs id="defs9">
+                                                            <path id="SVGID_1_" d="M0 0h120.3v150H0z"></path>
+                                                        </defs>
+                                                        <clippath id="SVGID_2_">
+                                                            <use id="use13" xlink:href="#SVGID_1_" width="100%" height="100%" overflow="visible"></use>
+                                                        </clippath>
+                                                        <path id="path15" d="M117.1 3.8c-2.3-2.4-5.4-3.8-8.8-3.8h-9.4C92 0 85.3 5.6 84.1 12.4l-.6 3.4c-.6 3.4.2 6.6 2.3 9.1 2.1 2.4 5.1 3.8 8.5 3.8h12.2c1.7 0 3.3-.3 4.8-.9l-1.3 11c-1.2-.5-2.6-.8-4-.8H92.1c-5.9 0-11.8 4.7-13 10.5l-12.3 57.8-57.9-4.2c-3.1-.2-5.7.8-7.4 2.9-1.5 1.9-2 4.6-1.2 7.4L7.1 139c1.5 5.7 7.5 10.4 13.4 10.4h74c6 0 11.4-4.9 12-10.8l9.5-89.5c.1-.5.1-1 0-1.5l3.3-27.8c.5-1.2.7-2.5.8-3.8l.2-3.1c.2-3.4-.9-6.7-3.2-9.1zm0 0" clip-path="url(#SVGID_2_)" class="st0"></path>
+                                                    </g>
+                                                </g>
+                                            </svg>5 мест
+                                        </div>
+                                        <div> 
+                                            <svg id="icon-auto-info-4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 130 150" width="13" height="15" class="icon">
+                                                <style id="style3">.st0{clip-path:url(#SVGID_2_);}</style>
+                                                <g id="g5">
+                                                    <g id="g7" transform="scale(1.00288 1.00334)">
+                                                        <defs id="defs9">
+                                                            <path id="SVGID_1_" d="M0 0h130v150H0z"></path>
+                                                        </defs>
+                                                        <clippath id="SVGID_2_">
+                                                            <use id="use13" xlink:href="#SVGID_1_" width="100%" height="100%" overflow="visible"></use>
+                                                        </clippath>
+                                                        <path id="path15" d="M124.6 103.1c-11.4 0-20.6-13.1-20.6-29.3 0-16.2 9.3-29.3 20.6-29.3 1.8 0 3.5-1 4.4-2.6.9-1.6.8-3.5-.1-5.1l-13.5-22.2c-.8-1.3-2.2-2.2-3.7-2.4-1.5-.2-3 .3-4.1 1.4-4.7 4.7-12.4 4.7-17.1 0C88.2 11.3 87 8.3 87 5c0-2.8-2.2-5-5-5H47.7c-2.8 0-5 2.3-5 5 0 3.2-1.3 6.3-3.5 8.6-4.7 4.7-12.4 4.7-17.1 0-1.1-1.1-2.6-1.6-4.1-1.4-1.5.2-2.9 1.1-3.7 2.4L.7 36.9c-.9 1.6-1 3.5-.1 5.1.9 1.6 2.6 2.6 4.4 2.6 11.4 0 20.6 13.1 20.6 29.3 0 16.2-9.2 29.2-20.6 29.2-1.7 0-3.3.9-4.2 2.3-.9 1.4-1 3.3-.3 4.8L9 128.8c.9 2 3.1 3.2 5.3 2.9.4-.1 35.7-5.1 45.7 15 .8 1.7 2.5 2.7 4.4 2.8 1.9 0 3.6-1 4.4-2.7 10.8-20.5 46.2-16.5 46.5-16.5 2.1.3 4.1-.8 5.1-2.7l8.5-17.2c.8-1.6.7-3.4-.2-4.9-.8-1.5-2.4-2.4-4.1-2.4zm-56.3 13.6c0 1.9-1.6 3.5-3.5 3.5s-3.5-1.6-3.5-3.5v-2.3c0-1.9 1.6-3.5 3.5-3.5s3.5 1.6 3.5 3.5v2.3zm0-16.8c0 1.9-1.6 3.5-3.5 3.5s-3.5-1.6-3.5-3.5v-4.2c0-1.9 1.6-3.5 3.5-3.5s3.5 1.6 3.5 3.5v4.2zm0-18.9c0 1.9-1.6 3.5-3.5 3.5s-3.5-1.6-3.5-3.5v-4.2c0-1.9 1.6-3.5 3.5-3.5s3.5 1.6 3.5 3.5V81zm0-18.8c0 1.9-1.6 3.5-3.5 3.5s-3.5-1.6-3.5-3.5V58c0-1.9 1.6-3.5 3.5-3.5s3.5 1.6 3.5 3.5v4.2zm0-18.8c0 1.9-1.6 3.5-3.5 3.5s-3.5-1.6-3.5-3.5v-4.2c0-1.9 1.6-3.5 3.5-3.5s3.5 1.6 3.5 3.5v4.2zm0-18.8c0 1.9-1.6 3.5-3.5 3.5s-3.5-1.6-3.5-3.5v-2.3c0-1.9 1.6-3.5 3.5-3.5s3.5 1.6 3.5 3.5v2.3zm0 0" clip-path="url(#SVGID_2_)" class="st0"></path>
+                                                    </g>
+                                                </g>
+                                            </svg>кожанный
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="auto__title">
+                                        <h2>ПРОКАТ АВТОМОБИЛЯ BMW 520</h2>
+                                    </div>
+                                    <label class="label-control label-control--auto">Выберите даты аренды</label>
+                                    <div class="row">
+                                        <div class="col-480-6 col-sm-6">
+                                            <div class="form-group form-group--has-icon">
+                                                <input type="text" placeholder="Выдача авто" class="form-control form-control--light"><i class="ion-android-calendar"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-480-6 col-sm-6">
+                                            <div class="form-group form-group--has-icon">
+                                                <input type="text" placeholder="Возврат авто" class="form-control form-control--light"><i class="ion-android-calendar"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-480-6 col-sm-6">
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <label class="label-control label-control--auto label-control--auto-lg">Количество дней</label>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="form-control form-control--light form-control--quantity"><span class="color color--red"><strong>2 </strong></span>дня</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-480-6 col-sm-6">
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-lg-5">
+                                                        <label class="label-control label-control--auto label-control--auto-lg">Цена в сутки</label>
+                                                    </div>
+                                                    <div class="col-lg-7">
+                                                        <div class="form-control form-control--light form-control--quantity big"><span class="color color--red"><strong>2399 </strong></span>руб</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-checkbox__row form-check-required">
+                                        <div class="required-info">Обязательное поле!</div>
+                                        <label class="form-checkbox">
+                                            <input type="checkbox"><span></span><span class="span"><em>Выезд за пределы Московской области +15%</em></span>
+                                        </label>
+                                    </div>
+                                    <div class="auto__price">Общая сумма:<strong>7699</strong><span>руб</span></div>
+                                    <button type="submit" class="btn btn--big-order button-check-required">Заказать авто</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="content__body">
+                <div class="container">
+                    <h4>АРЕНДА (ПРОКАТ) АВТОМОБИЛЯ BMW 520 В МОСКВЕ</h4>
+                    <p>Предлагает вам в прокат BMW в Москве с возможностью перемещаться не только по городу (внутри МКАД), но и за пределами столицы. Вы сможете выезжать в область и в другие регионы РФ, и это является весомым преимуществом нашей компании. Постоянным клиентам предоставляем особые условия для проката БМВ в Москве – убедитесь, что брать в аренду транспортные средства премиум-класса у нас выгодно.</p>
+                    <p><strong>Преимущества проката и почему стоит выбрать именно роскошную 520 модель?</strong></p>
+                    <ul class="list">
+                        <li>Все БМВ находятся в идеальном техническом состоянии;</li>
+                        <li>Бюджетный расход топлива – всего 9 литров на 100 км;</li>
+                        <li>Комфортный кожаный салон авто: безупречно чистый и презентабельный;</li>
+                        <li>Очевидная финансовая выгода – предлагаем оптимальные расценки на прокат BMW в Москве;</li>
+                        <li>Отсутствие ответственности – все авто застрахованы по ОСАГО и КАСКО;</li>
+                        <li>Полная комплектация – наши машины оснащены парктрониками, двухзонным климат-контролем, подогревом сидений и зеркал и проч.;</li>
+                        <li>Быстрая подача транспортного средства – вы получите чистое авто с заправленным баком сразу после подписания договора.</li>
+                    </ul>
+                    <p>Аренда BMW в Москве – это правильный выбор тех, кто ценит комфорт и хочет получать максимум удовольствий от привычных поездок по городу. Мы рады предложить вам привлекательные условия для проката: услуги предоставляются и для физических лиц, и для организаций. Независимо от срока аренды мы обеспечиваем техническую поддержку и помогаем в решении любых вопросов, связанных с эксплуатацией авто.</p>
+                    <h4>BMW 520 – автомобиль, который может стать вашим уже сегодня.</h4>
+                    <p>Элитное авто в аренду под такси станет отличным решением для перспективной работы и комфортабельного перемещения. Автомобиль VIP-класса BMW 520 F10 A/T не затратное транспортное средство, ведь двухлитровый турбодвигатель потребляет всего 9 литров топлива на стандартный пробег в 100 км.</p>
+                    <p>Вождение не станет утомительным, если речь идет о династии БМВ, представителем которого является BMW 520 F10 A/T. Внешние данные соответствуют начинке. Несмотря на презентабельность и высокую отметку в рейтинге аналогов, автомобиль немецкого качества снизит расходы на обслуживание, благодаря отменному качеству деталей и проработанной технологии.</p>
+                    <p>Пятиместный седан оснащен передним и задним парктроником. Двухзонный климат-контроль, передние/задние электростеклоподъемники и кожаный салон обеспечат достойный комфорт водителю и его пассажирам. Спортивный характер лаконично вливается в элегантное оформление, что непременно в приоритете.</p>
+                    <p>BMW 520 F10 A/T станет оптимальным решением, если нужна машина в аренду для такси или транспортное средство для отдыха и деловых встреч. Возможность прокатиться на динамичном и комфортабельном немце оказалась более, чем доступной. Приемлемые расценки на аренду автомобиля – это лишь самая малость эффективной продуктивности и драйверских качеств.</p>
+                    <p>Благодаря функции Start/Stop водитель имеет возможность предотвратить излишний расход топлива на холостом ходу. Атлетические формы станут предметом вожделения очевидцев. Кроме финансовой выгоды водитель получит невообразимое удовольствие от комфортабельности салона, который преимущественно выполнен кожаной обивкой. Подогрев сидения согреет в холодную зиму, а мощный кондиционер создаст оптимальный микроклимат в салоне.</p>
+                    <p>Аренда авто и прокат автомобиля BMW 520 (БМВ 520)</p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer-->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__body">
+                    <div>
+                        <div class="footer__logo"><img src="./img/footer-logo.png" alt=""></div>
+                    </div>
+                    <div>
+                        <div class="copyright">2001-2016 Аренда автомобилей - DINAMIKA</div>
+                    </div>
+                    <div>
+                        <div class="development">create with <i class="ion-heart"> </i><a href="#">by piarme</a></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--[if gte IE 9]
+        <script src='./js/libs/html5shiv/es5-shim.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+        <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+        
+        -->
+        <!-- Vendor.js
+        Modernizr v2.8.3
+        Plugins-scroll
+        -->
+        <script src="./js/libs/vendor.js"></script>
+        <!-- Footer js-->
+        <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <script src="./js/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="./js/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="./js/common.js"></script>
+        <!-- Retina js-->
+        <script src="./js/libs/retinajs/retina.min.js"></script>
+        <script>retinajs( $('img') );</script>
+    </body>
+</html>

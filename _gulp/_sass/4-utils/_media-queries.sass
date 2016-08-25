@@ -147,17 +147,27 @@
         &.next
           float: right
 
-  .form-checkbox__row
-    text-align: left
-    margin-bottom: 0
-    margin-top: 3px
-    padding-left: 6px
-    .required-info
-      &::after
-        left: 5px
+  .form
+    &-control
+      &--quantity
+        margin-left: inherit
+    &-checkbox__row
+      text-align: left
+      margin-top: 3px
+      padding-left: 6px
+      .required-info
+        &::after
+          left: 5px
+      &--contacts
+        margin-bottom: 0
+
   .btn
     &--contacts
       float: right
+    &--big-order
+      margin-left: auto
+      margin-right: auto
+      display: block
 
   .contacts__map
     padding-bottom: 620px
@@ -203,7 +213,25 @@
       &--last
         margin-top: 50px
 
-@media (min-width: 468px) and (max-width: 767px)
+  .auto
+    &__info
+      margin-left: auto
+      margin-right: auto
+      &>div
+        width: 25%
+        padding-left: 0 !important
+        text-align: center
+        &:nth-child(2)
+          border-right: 1px solid $color-lightgray
+    &__title
+      text-align: left
+    &__price
+      text-align: left
+
+  .label-control--auto
+    text-align: left
+
+@media (min-width: 480px) and (max-width: 767px)
   .col
     &-480-5, &-480-6, &-480-7
       width: 41.66666667%
@@ -376,6 +404,8 @@
       margin-top: 135px
       padding-bottom: 35px
       max-width: inherit
+    &-checkbox [type=checkbox] + span
+      margin-right: 10px
 
   .about
     margin-top: -215px
@@ -400,6 +430,13 @@
       &__body
         max-width: inherit
 
+  .auto
+    &__body
+      max-width: inherit
+    &__img
+      max-width: 380px
+      margin-left: inherit
+
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
   .container
@@ -418,6 +455,8 @@
   .btn
     &--contacts
       margin-right: -10px
+    &--big-order
+      margin-left: inherit
 
   .about
     margin-top: -215px
@@ -440,3 +479,18 @@
     &__top
       &--about
         padding-bottom: 240px
+
+  .auto
+    &__img
+      max-width: 485px
+      img
+        max-width: inherit
+    &__info
+      max-width: 485px
+
+  .label
+    &-control
+      &--auto-lg
+        margin-right: -15px
+        white-space: nowrap
+        margin-top: 5px

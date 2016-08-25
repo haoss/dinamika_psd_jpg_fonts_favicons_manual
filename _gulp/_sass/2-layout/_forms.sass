@@ -26,6 +26,19 @@ button, html input[type=button], input[type=reset], input[type=submit]
     margin-bottom: 20px
     position: relative
 
+    &--has-icon
+      [class*=ion-]
+        color: #a6a6a6
+        position: absolute
+        left: 13px
+        top: 9px
+        display: block
+        line-height: 0
+        font-size: rem(14)
+
+      .form-control
+        padding-left: 30px
+
   &-control, &__control
     display: block
     width: 100%
@@ -42,11 +55,16 @@ button, html input[type=button], input[type=reset], input[type=submit]
     font-family: $font-dejavu-cond-book
     box-shadow: none
 
+    &--light
+      background-color: $color-lightgray
+      border-color: $color-lightgray
+
   &-checkbox
     font-family: $font-dejavu-cond-book
     line-height: 1
     position: relative
     display: inline-block
+    cursor: pointer
     [type=checkbox]
       display: none
       &+span
@@ -56,7 +74,7 @@ button, html input[type=button], input[type=reset], input[type=submit]
         border: 4px solid $color-red
         position: relative
         vertical-align: middle
-        margin-right: 10px
+        margin-right: 5px
         &::after
           position: absolute
           content: ''
@@ -118,14 +136,22 @@ label
 
 .form
   &-checkbox__row
-    text-align: center
+    text-align: left
     margin-bottom: 15px
     position: relative
+    em
+      font-family: $font-dejavu-cond-italic
 
     .required-info
       margin-bottom: 8px
       &::after
-        left: 36px
+        left: 3px
+
+    &--contacts
+      text-align: center
+      .required-info
+        &::after
+          left: 36px
 
   &__body
     background-color: $color-lightgray
@@ -156,7 +182,7 @@ label
     position: absolute
     content: ''
     top: 100%
-    left: 13px
+    left: 8px
 
 @keyframes required
   0%
@@ -170,3 +196,30 @@ label
   .required-info
     display: block
     opacity: 1
+
+.label
+  &-control
+    font-family: $font-dejavu-serif-bold
+    font-size: rem(12)
+    margin-bottom: 8px
+    &--auto
+      display: block
+      text-align: center
+
+.form-control
+  &--quantity
+    max-width: 130px
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+    color: #9d9d9d
+    padding-top: 0
+    padding-bottom: 0
+    line-height: 27px
+    &.big
+      max-width: 155px
+    strong
+      font-family: $font-sportword
+      font-size: rem(16)
+      display: inline-block
+      margin-right: 5px

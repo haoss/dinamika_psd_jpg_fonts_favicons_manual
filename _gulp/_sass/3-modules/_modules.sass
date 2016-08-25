@@ -214,3 +214,76 @@
   font-size: rem(40)
   font-family: $font-sportword
   color: $color-red
+
+/**/
+.content__auto
+  background-color: $color-white
+  padding-top: 65px
+  padding-bottom: 65px
+
+.auto
+  &__body
+    max-width: 470px
+    margin: 0 auto
+  &__img
+    margin-bottom: 25px
+    img
+      margin-left: auto
+      margin-right: auto
+
+  &__info
+    border-top: 1px solid $color-lightgray
+    color: #424242
+    font-family: $font-dejavu-cond-bold
+    margin: 0 20px 35px 20px
+    text-transform: uppercase
+    font-size: rem(10)
+    +clearfix
+    &>div
+      height: 30px
+      float: left
+      width: 50%
+      text-align: left
+      border-bottom: 1px solid $color-lightgray
+      line-height: 31px
+      padding-left: 14px
+      &:nth-child(1), &:nth-child(3)
+        border-right: 1px solid $color-lightgray
+        padding-left: 30px
+
+    .icon
+      vertical-align: -3px
+      margin-right: 7px
+      g
+        fill: $color-red
+
+  &__title
+    text-align: center
+
+  &__price
+    text-align: center
+    font-family: $color-darkgray
+    font-size: rem(16)
+    margin-bottom: 20px
+    font-family: $font-dejavu-serif-bold
+    strong
+      font-size: rem(22)
+      color: $color-red
+      font-family: $font-sportword
+      display: inline-block
+      margin-left: 10px
+      margin-right: 3px
+    span
+      font-size: rem(12)
+      color: #9d9d9d
+      font-family: $font-dejavu-serif-book
+
+/**/
+.autopark
+  &__top
+    background-color: $color-gray
+    .container
+      background-color: $color-lightgray
+
+  &__bottom
+    background-color: $color-white
