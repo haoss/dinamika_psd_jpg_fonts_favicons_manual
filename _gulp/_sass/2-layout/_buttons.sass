@@ -84,3 +84,21 @@
     font-size: rem(21)
     &:hover
       @include sprite($btn-right-big-hover)
+
+  &--more
+    @extend .btn--right-small
+    @include sprite($btn-left-small)
+    &:hover
+      @include sprite($btn-left-small-hover)
+
+  &--fast-order
+    padding: 0
+    height: auto
+    line-height: inherit
+    font-family: $font-sportword
+    font-size: rem(11)
+    text-transform: uppercase
+    background-color: transparent
+    text-decoration: none
+    &:hover
+      text-decoration: underline

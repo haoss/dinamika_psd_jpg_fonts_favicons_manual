@@ -4808,7 +4808,7 @@ ol.list li::before {
       font-size: 1.3125rem;
       position: relative;
       top: 1px; }
-  .btn--right-small, .btn--prices, .btn--big-order {
+  .btn--right-small, .btn--prices, .btn--big-order, .btn--more {
     background-image: url(../img/sprite.png);
     background-position: 0px -105px;
     width: 145px;
@@ -4821,7 +4821,7 @@ ol.list li::before {
     text-transform: uppercase;
     font-family: "Sports World";
     text-decoration: none; }
-    .btn--right-small:hover, .btn--prices:hover, .btn--big-order:hover, .btn--right-small:active, .btn--prices:active, .btn--big-order:active, .btn--right-small:focus, .btn--prices:focus, .btn--big-order:focus {
+    .btn--right-small:hover, .btn--prices:hover, .btn--big-order:hover, .btn--more:hover, .btn--right-small:active, .btn--prices:active, .btn--big-order:active, .btn--more:active, .btn--right-small:focus, .btn--prices:focus, .btn--big-order:focus, .btn--more:focus {
       background-image: url(../img/sprite.png);
       background-position: 0px -70px;
       width: 145px;
@@ -4851,6 +4851,27 @@ ol.list li::before {
       background-position: 0px -350px;
       width: 290px;
       height: 70px; }
+  .btn--more {
+    background-image: url(../img/sprite.png);
+    background-position: 0px -35px;
+    width: 145px;
+    height: 35px; }
+    .btn--more:hover {
+      background-image: url(../img/sprite.png);
+      background-position: 0px 0px;
+      width: 145px;
+      height: 35px; }
+  .btn--fast-order {
+    padding: 0;
+    height: auto;
+    line-height: inherit;
+    font-family: "Sports World";
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    background-color: transparent;
+    text-decoration: none; }
+    .btn--fast-order:hover {
+      text-decoration: underline; }
 
 /* carousel */
 .carousel ul, .carousel li {
@@ -5503,7 +5524,36 @@ label {
     background-color: #f2f2f2; }
 
 .autopark__bottom {
-  background-color: #fff; }
+  background-color: #fff;
+  margin-bottom: -20px;
+  padding-top: 50px;
+  padding-bottom: 75px; }
+
+.autopark__block {
+  padding: 20px 10px 25px 10px;
+  margin: 0 -15px;
+  text-align: center;
+  color: #232323;
+  font-size: 0.75rem;
+  transition: background 0.5s linear; }
+  .autopark__block:hover {
+    background-color: #f2f2f2; }
+  .autopark__block .auto__info {
+    margin: 20px auto 0 auto;
+    max-width: 230px; }
+  .autopark__block h2 {
+    font-size: 1.3125rem;
+    margin-bottom: 10px; }
+  .autopark__block .btn--more {
+    margin-bottom: 15px; }
+
+.autopark__img {
+  margin-bottom: 25px;
+  padding: 0 25px; }
+  .autopark__img img {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto; }
 
 /* clear */
 .clear, .clear1, .clear2, .clear3, .clear4, .clear5, .clear6, .clear7, .clear8, .clear9, .clear10, .clear11, .clear12, .clear13, .clear14, .clear15, .clear16, .clear17, .clear18, .clear19, .clear20, .clear21, .clear22, .clear23, .clear24, .clear25, .clear26, .clear27, .clear28, .clear29, .clear30, .clear31, .clear32, .clear33, .clear34, .clear35, .clear36, .clear37, .clear38, .clear39, .clear40, .clear41, .clear42, .clear43, .clear44, .clear45, .clear46, .clear47, .clear48, .clear49, .clear50, .clear51, .clear52, .clear53, .clear54, .clear55, .clear56, .clear57, .clear58, .clear59, .clear60, .clear61, .clear62, .clear63, .clear64, .clear65, .clear66, .clear67, .clear68, .clear69, .clear70, .clear71, .clear72, .clear73, .clear74, .clear75, .clear76, .clear77, .clear78, .clear79, .clear80, .clear81, .clear82, .clear83, .clear84, .clear85, .clear86, .clear87, .clear88, .clear89, .clear90, .clear91, .clear92, .clear93, .clear94, .clear95, .clear96, .clear97, .clear98, .clear99, .clear100, .clear-hr {
@@ -6000,7 +6050,9 @@ label {
   .auto__price {
     text-align: left; }
   .label-control--auto {
-    text-align: left; } }
+    text-align: left; }
+  .autopark__block .auto__info {
+    max-width: inherit; } }
 
 @media (min-width: 480px) and (max-width: 767px) {
   .col-480-5, .col-480-6, .col-480-7 {
@@ -6170,7 +6222,10 @@ label {
     max-width: inherit; }
   .auto__img {
     max-width: 380px;
-    margin-left: inherit; } }
+    margin-left: inherit; }
+  .autopark__block .auto__info {
+    margin-left: 30px;
+    margin-right: 30px; } }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
