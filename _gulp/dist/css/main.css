@@ -5567,8 +5567,6 @@ label {
 /**/
 .autopark__top {
   background-color: #dcdddd; }
-  .autopark__top .container {
-    background-color: #f2f2f2; }
 
 .autopark__bottom {
   background-color: #fff;
@@ -5602,6 +5600,220 @@ label {
     margin-left: auto;
     margin-right: auto;
     max-height: 225px; }
+
+.autopark__select {
+  background-color: #f2f2f2;
+  position: relative;
+  z-index: 100;
+  margin-bottom: -20px; }
+  .autopark__select__mobile {
+    padding: 25px 0;
+    display: block;
+    position: relative; }
+  .autopark__select__desctop {
+    display: none;
+    padding: 25px 0;
+    position: relative; }
+    .autopark__select__desctop__body {
+      display: table;
+      height: 100px;
+      width: 100%; }
+      .autopark__select__desctop__body > div {
+        display: table-cell;
+        vertical-align: middle; }
+        .autopark__select__desctop__body > div:first-child {
+          border-right: 1px solid #fff;
+          width: 90px;
+          text-align: center; }
+      .autopark__select__desctop__body ul {
+        margin: 0;
+        padding: 0;
+        display: table;
+        width: 100%; }
+        .autopark__select__desctop__body ul > li {
+          margin: 0;
+          list-style: none;
+          display: table-cell;
+          vertical-align: middle;
+          width: calc(100% / 7); }
+          .autopark__select__desctop__body ul > li > a {
+            display: block;
+            height: 100px;
+            text-align: center;
+            text-decoration: none;
+            font-family: "Sports World";
+            text-transform: uppercase;
+            padding-top: 37px; }
+            .autopark__select__desctop__body ul > li > a small {
+              font-size: 0.75rem;
+              opacity: 0; }
+            .autopark__select__desctop__body ul > li > a svg {
+              display: block;
+              margin: 0 auto 5px !important;
+              height: 25px; }
+              .autopark__select__desctop__body ul > li > a svg path {
+                transition: color 0.3s ease;
+                fill: #cfcfcf; }
+          .autopark__select__desctop__body ul > li.active > a small {
+            opacity: 1; }
+          .autopark__select__desctop__body ul > li.active > a svg path {
+            fill: #c63d23; }
+          .autopark__select__desctop__body ul > li:not(:last-child) > a {
+            border-right: 1px solid #fff; }
+  .autopark__select__top {
+    height: 100px;
+    display: table;
+    width: 100%; }
+    .autopark__select__top > div {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 0 15px; }
+      .autopark__select__top > div:first-child {
+        border-right: 1px solid #fff;
+        width: 90px;
+        text-align: center; }
+      .autopark__select__top > div:last-child {
+        width: 70px;
+        text-align: center; }
+    .autopark__select__top .span {
+      color: #cfcfcf; }
+      .autopark__select__top .span--car {
+        display: none !important; }
+    .autopark__select__top svg path {
+      transition: color 0.3s ease;
+      fill: #cfcfcf; }
+  .autopark__select__bottom {
+    position: absolute;
+    width: 100%;
+    background-color: #f2f2f2;
+    border-top: 1px solid #fff;
+    padding: 10px 0;
+    top: 150px;
+    opacity: 0;
+    display: none;
+    animation: menuDropdown 0.5s ease; }
+    .autopark__select__bottom.active {
+      display: block;
+      opacity: 1; }
+    .autopark__select__bottom > ul {
+      margin: 0;
+      padding: 0; }
+      .autopark__select__bottom > ul > li {
+        margin: 0;
+        list-style: none; }
+        .autopark__select__bottom > ul > li > a {
+          display: block;
+          color: #cfcfcf;
+          text-decoration: none;
+          padding: 10px 0px 10px 20px; }
+        .autopark__select__bottom > ul > li:hover > a {
+          color: #c63d23 !important; }
+          .autopark__select__bottom > ul > li:hover > a svg path {
+            fill: #c63d23 !important; }
+        .autopark__select__bottom > ul > li.selected > a {
+          color: #c63d23 !important;
+          background-color: #dcdddd; }
+          .autopark__select__bottom > ul > li.selected > a .ion-android-checkbox-outline-blank {
+            display: none; }
+          .autopark__select__bottom > ul > li.selected > a .ion-android-checkbox-outline {
+            display: block; }
+          .autopark__select__bottom > ul > li.selected > a svg path {
+            fill: #c63d23 !important; }
+  .autopark__select__checkbox i {
+    font-size: 2.5rem;
+    display: none;
+    line-height: 0; }
+    .autopark__select__checkbox i.ion-android-checkbox-outline-blank {
+      display: inline-block; }
+  .autopark__select__checkbox svg path {
+    transition: color 0.3s ease;
+    fill: #cfcfcf; }
+  .autopark__select .span {
+    display: inline-block;
+    vertical-align: middle; }
+    .autopark__select .span--checkbox {
+      margin-right: 15px; }
+    .autopark__select .span--car {
+      width: 70px;
+      text-align: center;
+      margin-right: 15px; }
+    .autopark__select .span--info {
+      font-size: 0.625rem;
+      font-family: "Sports World";
+      text-transform: uppercase; }
+      .autopark__select .span--info small {
+        display: block;
+        line-height: 1;
+        font-size: 0.625rem; }
+      .autopark__select .span--info strong {
+        font-size: 1.6875rem;
+        display: block;
+        line-height: 1;
+        font-family: "Sports World";
+        margin-top: -3px; }
+  .autopark__select__filter {
+    font-size: 2.875rem;
+    color: #444444;
+    text-decoration: none; }
+    .autopark__select__filter.active {
+      color: #c63d23; }
+  .autopark__select__all-filter {
+    font-size: 0.625rem;
+    font-family: "Sports World";
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block; }
+    .autopark__select__all-filter small {
+      display: block;
+      line-height: 1;
+      font-size: 0.625rem; }
+    .autopark__select__all-filter strong {
+      font-size: 1.6875rem;
+      display: block;
+      line-height: 1;
+      font-family: "Sports World";
+      margin-top: -3px; }
+
+@keyframes menuDropdown {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.icon-select-car-1 {
+  width: 70px;
+  height: 24px;
+  margin-top: 6px; }
+
+.icon-select-car-2 {
+  width: 70px;
+  height: 25px;
+  margin-top: 6px; }
+
+.icon-select-car-3 {
+  width: 70px;
+  height: 21px;
+  margin-top: 10px; }
+
+.icon-select-car-4 {
+  width: 70px;
+  height: 25px;
+  margin-top: 5px; }
+
+.icon-select-car-5 {
+  width: 65px;
+  height: 28px;
+  margin-top: 4px; }
+
+.icon-select-car-6 {
+  width: 65px;
+  height: 24px;
+  margin-top: 5px; }
+
+.icon-select-car-7 {
+  width: 55px;
+  height: 24px;
+  margin-top: 7px; }
 
 /**/
 .popup {
@@ -5831,17 +6043,6 @@ label {
     background-position: top center;
     background-image: url("../img/dark-pattern.png");
     background-size: cover; }
-
-.svg__background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10; }
-
-.svg svg {
-  height: 100% !important; }
 
 .terms {
   text-align: center;
@@ -6571,7 +6772,12 @@ label {
   .main-news__block__body {
     height: 210px; }
   .main-news__block:hover .main-news__text {
-    transform: translateY(138px); } }
+    transform: translateY(138px); }
+  .autopark__select .span--car {
+    display: inline-block !important; }
+  .autopark__select .span--checkbox {
+    width: 72px;
+    padding-left: 12px; } }
 
 @media (min-width: 480px) and (max-width: 767px) {
   .col-480-5, .col-480-6, .col-480-7 {
@@ -6772,7 +6978,15 @@ label {
   .main-news__block {
     margin-top: auto !important; }
   .all-news {
-    max-width: inherit; } }
+    max-width: inherit; }
+  .autopark__select__mobile {
+    display: none; }
+  .autopark__select__desctop {
+    display: block; }
+    .autopark__select__desctop__body ul > li > a {
+      padding-top: 34px; }
+      .autopark__select__desctop__body ul > li > a svg {
+        height: 35px; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .contacts__block > div:first-child {
@@ -6902,7 +7116,13 @@ label {
   .main-news__img img {
     max-height: 133px; }
   .main-news__block:hover .main-news__text {
-    transform: translateY(128px); } }
+    transform: translateY(128px); }
+  .autopark__select__desctop__body > div:first-child {
+    width: 118px; }
+  .autopark__select__desctop__body ul > li > a {
+    padding-top: 34px; }
+    .autopark__select__desctop__body ul > li > a svg {
+      height: 35px; } }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
@@ -7003,6 +7223,11 @@ label {
     top: 4px;
     right: 4px; }
     .main-news__img img {
-      max-height: 162px; } }
+      max-height: 162px; }
+  .autopark__select {
+    margin-left: -15px;
+    margin-right: -15px; }
+    .autopark__select__desctop__body > div:first-child {
+      width: 143px; } }
 
 /*# sourceMappingURL=main.css.map */

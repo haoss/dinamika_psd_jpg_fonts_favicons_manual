@@ -88,16 +88,27 @@ $(document).ready(function(){
 		$.magnificPopup.close();
 	});
 
-  // Animation car list block
-  $('.car-list__block').each(function(){
-    $(this).on('hover', function(){
-      $(this).find('.car-list__human').animation({
-
-      })
-    }, function(){
-
+  // Autopark selected checkbox
+  $('.autopark__select__checkbox').each(function(){
+    $(this).on('click', function(){
+      $('.autopark__select__checkbox').removeClass('selected');
+      $(this).addClass('selected');
     })
+  });
+
+  $('.autopark__select__filter').on('click', function(e){
+    e.preventDefault();
+    $(this).toggleClass('active');
+    $('#autopark__select__bottom').toggleClass('active');
   })
+
+  $('.autopark__select__desctop__body li').each(function(){
+    $(this).on('click', function(){
+      $('.autopark__select__desctop__body li').removeClass('active');
+      $(this).addClass('active');
+    })
+  });
+
 
   // Chrome Smooth Scroll
   try {

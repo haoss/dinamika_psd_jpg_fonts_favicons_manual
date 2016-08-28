@@ -298,6 +298,13 @@
         .main-news__text
           transform: translateY(138px)
 
+  .autopark__select
+    .span--car
+      display: inline-block !important
+    .span--checkbox
+      width: 72px
+      padding-left: 12px
+
 @media (min-width: 480px) and (max-width: 767px)
   .col
     &-480-5, &-480-6, &-480-7
@@ -519,9 +526,21 @@
     &__block
       margin-top: auto !important
 
-
   .all-news
     max-width: inherit
+
+  .autopark
+    &__select
+      &__mobile
+        display: none
+      &__desctop
+        display: block
+        &__body
+          ul > li > a
+            padding-top: 34px
+            svg
+              height: 35px
+
 
 @media (min-width : 768px) and (max-width: 991px)
   .contacts
@@ -695,6 +714,17 @@
         .main-news__text
           transform: translateY(128px)
 
+  .autopark
+    &__select
+      &__desctop
+        &__body
+          &> div:first-child
+            width: 118px
+          ul > li > a
+            padding-top: 34px
+            svg
+              height: 35px
+
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
   .container
@@ -817,3 +847,12 @@
       right: 4px
       img
         max-height: 162px
+
+  .autopark
+    &__select
+      margin-left: -15px
+      margin-right: -15px
+      &__desctop
+        &__body
+          &>div:first-child
+            width: 143px
