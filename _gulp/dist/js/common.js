@@ -109,6 +109,13 @@ $(document).ready(function(){
     })
   });
 
+  // order-row
+  $('.order-row__button').on('click', function(e){
+    e.preventDefault();
+    $('#order-row__bottom').toggleClass('active');
+    $(this).toggleClass('active');
+  })
+
 
   // Chrome Smooth Scroll
   try {

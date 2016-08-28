@@ -364,6 +364,10 @@
               font-family: $font-sportword
               text-transform: uppercase
               padding-top: 37px
+              &:hover
+                svg
+                  path
+                    fill: $color-red
               small
                 font-size: rem(12)
                 opacity: 0
@@ -992,3 +996,80 @@
   padding-top: 20px
   max-width: 330px
   margin: 0 auto
+
+/**/
+.order-row
+  background:
+    color: $color-red
+    repeat: repeat
+    size: cover
+    image: url('../img/red-pattern.png')
+    position: top center
+  color: $color-white
+  &__form
+    min-height: 200px
+  &__title
+    font-size: rem(26)
+    font-family: $font-sportword
+    text-transform: uppercase
+    line-height: 1
+  &__top
+    padding: 14px 0
+    min-height: 55px
+  &__bottom
+    display: none
+    opacity: 0
+    animation: displayBlock 1s ease-in-out
+    &.active
+      opacity: 1
+      display: block
+
+
+  &__button
+    color: $color-white
+    overflow: hidden
+    position: relative
+    float: right
+    font-size: rem(13)
+    text-decoration: none
+    &:hover, &:active, &:focus
+      color: $color-white
+    em
+      display: inline-block
+      margin-right: 15px
+      font-family: $font-dejavu-cond-italic
+      vertical-align: middle
+    &.active
+      .order-row__radio
+        background-color: $color-white
+        &::after
+          border-color: $color-red
+          background-color: $color-white
+          left: 15px
+
+  &__radio
+    display: inline-block
+    height: 17px
+    width: 31px
+    position: relative
+    border: 2px solid $color-white
+    border-radius: 25px
+    vertical-align: middle
+    margin: 4px 0
+    transition: all 0.2s linear
+    &::after
+      content: ''
+      position: absolute
+      left: 1px
+      top: 1px
+      width: 11px
+      height: 11px
+      border-radius: 50%
+      border: 2px solid $color-white
+      transition: all 0.2s linear
+
+@keyframes displayBlock
+  0%
+    opacity: 0
+  100%
+    opacity: 1

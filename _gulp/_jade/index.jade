@@ -35,9 +35,9 @@ html(lang="ru")
                   li Porsche Cayenne
                   li и другие..
               
-            img(src="./img/car-list/сar-1/car-list-1.png", alt="").car-list__auto
-            img(src="./img/car-list/сar-1/car-human-1.png", alt="").car-list__human
-            img(src="./img/car-list/сar-1/car-human-1-smoke.png", alt="").car-list__smoke
+            img(src="./img/car-list/car-1/car-list-1.png", alt="").car-list__auto
+            img(src="./img/car-list/car-1/car-human-1.png", alt="").car-list__human
+            img(src="./img/car-list/car-1/car-human-1-smoke.png", alt="").car-list__smoke
         
         div
           .car-list__block
@@ -76,7 +76,23 @@ html(lang="ru")
             img(src="./img/car-list/car-5/car-list-5.png", alt="").car-list__auto
             img(src="./img/car-list/car-5/car-human-5.png", alt="").car-list__human
       
-      div(style='height: 200px')
+      //- div(style='height: 200px')
+        
+      // Order row
+      .order-row
+        .container
+          
+          .order-row__top
+            .row
+              .col-xs-7
+                .order-row__title Заказать автомобиль
+              .col-xs-5
+                a(href="#").order-row__button
+                  em Развернуть фильтр
+                  span.order-row__radio
+              
+          #order-row__bottom.order-row__bottom
+            .order-row__form
         
       // Rent terms
       .rent-terms
