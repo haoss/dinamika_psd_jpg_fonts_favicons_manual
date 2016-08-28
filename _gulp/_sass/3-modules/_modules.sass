@@ -291,6 +291,7 @@
     padding-top: 50px
     padding-bottom: 75px
 
+
   &__block
     // background-color: pink
     padding: 20px 10px 25px 10px
@@ -299,6 +300,7 @@
     color: #232323
     font-size: rem(12)
     transition: background 0.5s linear
+    // border: 1px solid pink
     &:hover
       background-color: $color-lightgray
 
@@ -318,3 +320,462 @@
       text-align: center
       margin-left: auto
       margin-right: auto
+      max-height: 225px
+
+/**/
+.popup
+  position: relative
+  background: #FFF
+  padding: 55px 20px 20px 20px
+  width: auto
+  max-width: 1170px
+  margin: 20px auto
+
+  .mfp-close.popup__close
+    font-size: rem(35)
+    color: $color-red
+    height: 60px
+    line-height: 60px
+    width: 60px
+
+  &__order
+    padding-bottom: 85px
+    text-align: center
+    &>div
+      max-width: 975px
+      margin: 0 auto
+
+    h2
+      font-size: rem(21)
+      margin-bottom: 10px
+
+    &__img
+      margin-bottom: 30px
+      img
+        margin-left: auto
+        margin-right: auto
+        max-width: 650px
+        width: 100%
+
+    &__info
+      font-size: rem(12)
+      p
+        margin: 0
+
+    &__bottom
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      background-color: #d0d0d0
+      .auto__info
+        margin: 0 auto
+        max-width: 230px
+        border-color: #d0d0d0
+        &>div
+          border-color: #dadada
+        .icon g
+          fill: #939393
+        .span
+          display: none
+          line-height: 1
+        .table
+          margin: 0 auto
+          &>div
+            text-align: left
+
+    &__form
+      padding-top: 20px
+
+  &__header
+    @extend .content__head
+    .h1, h1
+      font-size: rem(30)
+
+.table
+  display: table
+  &>div
+    display: table-cell
+    vertical-align: middle
+
+/**/
+.car-list
+  +clearfix
+  &>div
+    width: 100%
+    float: none
+
+  &__auto
+    position: absolute
+    right: 0
+    bottom: 0
+    max-width: 100%
+    max-height: 175px
+
+  &__human
+    position: absolute
+    // display: none
+    left: 15px
+    bottom: 0
+    max-height: 80%
+    transform: translateY(15px)
+    opacity: 0
+    transition: transform 1s ease, opacity 1s ease
+    will-change: transform
+
+  &__smoke
+    position: absolute
+    bottom: 135px
+    left: 95px
+    width: 127px
+    // background-color: rgba(pink,0.2)
+    opacity: 0
+    transform: translateY(-2px)
+    transition: transform 1s ease, opacity 1s ease
+    will-change: transform
+
+  &__auto
+    position: absolute
+    max-width: 100%
+    height: auto
+    filter: grayscale(100%)
+    transition: filter 0.7s ease-in-out
+
+  &__block
+    width: 100%
+    height: 240px
+    position: relative
+    transition: background 0.3s linear
+    overflow: hidden
+    background:
+      color: $color-darkgray
+      position: top center
+      repeat: no-repeat
+      size: cover
+      image: url('../img/car-list/car-list-background.jpg')
+    &:hover
+      background:
+        image: url('../img/car-list/car-list-background-hover.jpg')
+      .car-list__auto
+        filter: grayscale(0%)
+      .car-list__human
+        // animation: human 1s ease-in forwards normal
+        transform: translateY(0px)
+        opacity: 1
+      .car-list__smoke
+        opacity: 1
+        transition-delay: 1s
+        transform: translateY(0px)
+      .car-list__title__bottom
+        transform: translateY(0%)
+        transition-delay: 0.5s
+
+  &__title
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 50
+
+    &__top
+      width: 230px
+      height: 52px
+      color: $color-white
+      background-color: $color-red
+      text-align: center
+      font-size: rem(18)
+      font-family: $font-sportword
+      padding-top: 10px
+      position: relative
+      z-index: 20
+      a
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 10
+      strong
+        display: block
+        font-family: $font-sportword
+        line-height: 1
+        margin-bottom: 3px
+      span
+        font-size: rem(10)
+        display: block
+        line-height: 1
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: -23px
+        width: 0
+        height: 100%
+        @include triangle(23px 52px, $color-red, up-right)
+
+    &__bottom
+      // display: none
+      background-color: $color-red
+      color: $color-white
+      position: absolute
+      width: 100%
+      // padding: 35px 25px
+      padding: 15px 15px
+      font-size: rem(14)
+      // font-size: rem(16)
+      font-family: $font-dejavu-cond-book
+      will-change: transform
+      transform: translateY(-200%)
+      transition: transform 0.5s ease-out
+      z-index: 10
+      &::after
+        content: ''
+        position: absolute
+        // bottom: -46px
+        bottom: -26px
+        left: 0
+        width: 0
+        // @include triangle(230px 46px, $color-red, up-right)
+        @include triangle(230px 26px, $color-red, up-right)
+      ul
+        margin: 0
+        padding: 0
+        &>li
+          list-style: none
+          margin: 0
+          &:not(:first-child)
+            // padding-top: 5px
+            padding-top: 2px
+
+/**/
+.rent-terms
+  // background-color: pink
+  position: relative
+  overflow: hidden
+
+  &>.container
+    padding-top: 80px
+    padding-bottom: 75px
+    position: relative
+    z-index: 50
+    background:
+      color: #1a1b1b
+      repeat: repeat
+      position: top center
+      image: url('../img/dark-pattern.png')
+      size: cover
+
+.svg
+  &__background
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 10
+  svg
+    height: 100% !important
+
+.terms
+  text-align: center
+  color: $color-white
+  &__img
+    background-color: $color-red
+    width: 122px
+    height: 122px
+    position: relative
+    margin: 0 auto 50px
+    transform: rotate(-45deg)
+    img
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%) rotate(45deg)
+    &::after
+      border: 1px solid $color-white
+      left: 5px
+      right: 5px
+      bottom: 5px
+      top: 5px
+      content: ''
+      position: absolute
+
+  &__title
+    text-transform: uppercase
+    font-size: rem(15)
+    font-family: $font-sportword
+    color: $color-red
+    max-width: 80%
+    margin: 0 auto
+
+  &>div
+    &:not(:last-child)
+      .terms__block
+        margin-bottom: 50px
+
+/**/
+.main-about
+  position: relative
+  overflow: hidden
+
+  &>.container
+    padding-top: 80px
+    // padding-bottom: 75px
+    position: relative
+    z-index: 50
+    background:
+      color: #1a1b1b
+      repeat: repeat
+      position: top center
+      image: url('../img/dark-pattern.png')
+      size: cover
+
+
+  &__body
+    color: $color-white
+    text-align: center
+
+  &__block
+    display: table
+    color: $color-red
+    font-family: $font-sportword
+    font-size: rem(15)
+    text-transform: uppercase
+    text-align: left
+    margin: 0 auto 25px
+    max-width: 215px
+    width: 100%
+    &>div
+      display: table-cell
+      vertical-align: middle
+      &:first-child
+        width: 65px
+      &:not(:first-child)
+        padding-left: 15px
+    img
+      max-width: 54px
+      width: auto
+    p
+      margin: 0
+
+.rent-terms
+  background: -webkit-radial-gradient(center ellipse, #202021 0%, #161819 100%)
+  background: -moz-radial-gradient(center ellipse, #202021 0%, #161819 100%)
+  background: radial-gradient(ellipse at center, #202021 0%, #161819 100%)
+
+.rent-terms, .main-about
+  background:
+    color: #1a1b1b
+    repeat: repeat
+    position: top center
+    image: url('../img/dark-pattern.png')
+    size: cover
+
+/**/
+.main-news
+  background-color: $color-gray
+
+  &__body
+    background-color: $color-lightgray
+    padding: 65px 10px 50px 10px
+    position: relative
+    z-index: 100
+    margin: -20px 0
+
+  &__block
+    position: relative
+    max-width: 330px
+    margin: 0 auto
+    &__shadow
+      position: absolute
+      right: 8px
+      bottom: -2px
+      width: 90%
+      height: 15px
+      background-color: $color-gray
+      transform: rotate(5deg)
+
+    &__body
+      padding: 3px
+      background-color: $color-white
+      overflow: hidden
+      position: relative
+      font-size: rem(13)
+      height: 234px
+      &::before
+        content: ''
+        position: absolute
+        width: 35px
+        height: 36px
+        background: #f2f2f2 url('../img/news-corner.png') 0 0
+        right: 0
+        top: 0
+        opacity: 1
+      a
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: 10
+      p
+        margin: 15px 0 0 0
+        opacity: 1
+        transition: transform 0.3s ease-out
+        height: 118px
+        overflow: hidden
+
+    &:hover
+      .main-news__block__body
+        &::before
+          opacity: 0
+      .main-news__img
+        transform: translateY(0%)
+        opacity: 1
+      .main-news__text
+        transform: translateY(125px)
+        p
+          opacity: 0
+      .main-news__title
+        color: $color-red
+
+  &__img
+    position: absolute
+    opacity: 0
+    transform: translateY(-130%)
+    transition: transform 0.3s ease-out
+    left: 3px
+    top: 3px
+    right: 3px
+    overflow: hidden
+    img
+      max-height: 125px
+
+  &__title
+    font-size: rem(15)
+    font-family: $font-dejavu-serif-bold
+    color: #232323
+    padding-right: 20px
+    height: 63px
+    position: relative
+    overflow: hidden
+    display: flex
+    align-items: center
+
+  &__row
+    &>div
+      &:not(:first-child)
+        .main-news__block
+          margin-top: 60px
+
+  &__text
+    transform: translateY(0%)
+    transition: transform 0.3s ease-out
+    padding: 20px 17px 10px 17px
+
+/**/
+.all-news
+  text-align: right
+  font-size: rem(11)
+  padding-top: 20px
+  max-width: 330px
+  margin: 0 auto

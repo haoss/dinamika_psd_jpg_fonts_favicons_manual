@@ -67,6 +67,36 @@ $(document).ready(function(){
     $('.form-check-required').each(function(){
       $(this).toggleClass('has-error');
     })
+  });
+
+  // Popup
+  $('.popup-link').magnificPopup({
+    type:'inline',
+    midClick: true,
+    closeMarkup: '<button title="%title%" type="button" class="mfp-close popup__close"><i class="ion-close-circled"></i></button>'
+  });
+
+  $('.popup-link--ajax').magnificPopup({
+    type:'ajax',
+    midClick: true,
+    closeMarkup: '<button title="%title%" type="button" class="mfp-close popup__close"><i class="ion-close-circled"></i></button>'
+  });
+
+  // Magnific popup alternative button close - close popup block
+  $(document).on('click', '.popup__close', function (e) {
+		e.preventDefault();
+		$.magnificPopup.close();
+	});
+
+  // Animation car list block
+  $('.car-list__block').each(function(){
+    $(this).on('hover', function(){
+      $(this).find('.car-list__human').animation({
+
+      })
+    }, function(){
+
+    })
   })
 
   // Chrome Smooth Scroll

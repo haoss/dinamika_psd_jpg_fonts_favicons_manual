@@ -100,5 +100,13 @@
     text-transform: uppercase
     background-color: transparent
     text-decoration: none
+    width: 145px
+    text-align: center
+    border: 0
     &:hover
       text-decoration: underline
+
+  &--popup__order
+    @extend .btn--right-small
+    &:hover
+      @include sprite($btn-right-small-hover)

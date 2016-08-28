@@ -14,14 +14,211 @@ html(lang="ru")
     
     include ./_include/_header
     
+    // Content
     .content
-      .container
+      
+      // Car list
+      .car-list
+        div
+          .car-list__block.car-list__block--big
+            .car-list__title
+              .car-list__title__top 
+                strong Аренда
+                span с водителем и без
+                a(href="#")
+              .car-list__title__bottom 
+                ul
+                  li Сhevrolet Camaro
+                  li AUDI a6
+                  li BMW 520
+                  li Mercesrs E 200
+                  li Porsche Cayenne
+                  li и другие..
+              
+            img(src="./img/car-list/сar-1/car-list-1.png", alt="").car-list__auto
+            img(src="./img/car-list/сar-1/car-human-1.png", alt="").car-list__human
+            img(src="./img/car-list/сar-1/car-human-1-smoke.png", alt="").car-list__smoke
         
-        h1 Главная 
-
+        div
+          .car-list__block
+            .car-list__title
+              .car-list__title__top 
+                strong такси
+                span премиум класс
+                a(href="#")
+            img(src="./img/car-list/car-2/car-list-2.png", alt="").car-list__auto
+            img(src="./img/car-list/car-2/car-human-2.png", alt="").car-list__human
+            
+          .car-list__block
+            .car-list__title
+              .car-list__title__top 
+                strong VIP Перевозки
+                span встреча в делегации
+                a(href="#")
+            img(src="./img/car-list/car-3/car-list-3.png", alt="").car-list__auto
+            img(src="./img/car-list/car-3/car-human-3.png", alt="").car-list__human
+      
+          .car-list__block
+            .car-list__title
+              .car-list__title__top 
+                strong Сопровождение
+                span c охраной
+                a(href="#")
+            img(src="./img/car-list/car-4/car-list-4.png", alt="").car-list__auto
+            img(src="./img/car-list/car-4/car-human-4.png", alt="").car-list__human
+      
+          .car-list__block
+            .car-list__title
+              .car-list__title__top 
+                strong VIP Мероприятия
+                span свадьба, банкеты и т.д.
+                a(href="#")
+            img(src="./img/car-list/car-5/car-list-5.png", alt="").car-list__auto
+            img(src="./img/car-list/car-5/car-human-5.png", alt="").car-list__human
+      
+      div(style='height: 200px')
+        
+      // Rent terms
+      .rent-terms
+        //- #svg__background1.svg__background
+          
+        .container
+          .terms
+            
+            .content__head.content__head--terms
+              .h1 АРЕНДОВАТЬ АВТОМОБИЛЬ В «dinamika» ОЧЕНЬ ПРОСТО!
+            
+            .terms.row
+              .col-480-6.col-sm-3
+                .terms__block
+                  .terms__img
+                    img(src="./img/icon/icon-terms-1.png", alt="")
+                  .terms__title ПОЗВОНИТЕ ИЛИ ЗАКАЖИТЕ ОНЛАЙН
+                  
+              .col-480-6.col-sm-3
+                .terms__block
+                  .terms__img
+                    img(src="./img/icon/icon-terms-2.png", alt="")
+                  .terms__title ПРЕДОСТАВЬТЕ ПАСПОРТ И ВОДИТЕЛЬСКИЕ ПРАВА
+                  
+              .col-480-6.col-sm-3
+                .terms__block
+                  .terms__img
+                    img(src="./img/icon/icon-terms-3.png", alt="")
+                  .terms__title ОПЛАТИТЕ ПРОКАТ АВТОМОБИЛЯ
+                  
+              .col-480-6.col-sm-3
+                .terms__block
+                  .terms__img
+                    img(src="./img/icon/icon-terms-4.png", alt="")
+                  .terms__title ПОЛУЧИТЕ АВТОМОБИЛЬ
+                  
+            
+            p Арендовать машину в «DINAMIKA» - очень просто! В богатом автопарке нашей компании вы сможете выбрать тот автомобиль, который будет в полной мере соответствовать вашим представлениям о роскоши, качестве и комфорте. Тот, кто однажды обратился к нам за подобной услугой, уже не ищет других, поскольку предлагаемые нами условия способны удовлетворить даже самого требовательного клиента.
+      
+      // News
+      .main-news
+        .container
+          
+          .main-news__body
+          
+            .content__head
+              .h1 Новости компании
+            
+            .main-news__row.row
+              .col-md-4.col-sm-6
+                
+                .main-news__block
+                  .main-news__block__shadow
+                  .main-news__block__body
+                    .main-news__img
+                      img(src="./tmp/news/news-list-1.png", alt="").img-responsive
+                    .main-news__text
+                      .main-news__title Получить машину можно через приложение
+                      p Автопрокатная компания DINAMIKA  вновь удивила своих постоянных клиентов, выпустив уникальное приложение для IOS и Android...
+                    a(href="javascript:void(0)")
+          
+              .col-md-4.col-sm-6
+                
+                .main-news__block
+                  .main-news__block__shadow
+                  .main-news__block__body
+                    .main-news__img
+                      img(src="./tmp/news/news-list-2.png", alt="").img-responsive
+                    .main-news__text
+                      .main-news__title Аренда авто на свадьбу
+                      p Автопрокатная компания DINAMIKA  вновь удивила своих постоянных клиентов, выпустив уникальное приложение для IOS и Android...
+                    a(href="javascript:void(0)")
+          
+              .col-md-4.col-sm-4.hidden-xs.hidden-sm
+                
+                .main-news__block
+                  .main-news__block__shadow
+                  .main-news__block__body
+                    .main-news__img
+                      img(src="./tmp/news/news-list-3.png", alt="").img-responsive
+                    .main-news__text
+                      .main-news__title Получить машину можно через приложение
+                      p Автопрокатная компания DINAMIKA  вновь удивила своих постоянных клиентов, выпустив уникальное приложение для IOS и Android...
+                    a(href="javascript:void(0)")
+            
+            
+            .all-news
+              a(href="#") все новости
+        
+      // About
+      .main-about
+        #svg__background2.svg__background
+          
+        .container
+          
+          .main-about__body
+            
+            .content__head.content__head--main-about
+              .h1 о компании
+            
+            p О личном автомобиле мечтает каждый. Однако не всегда есть возможность его приобрести. В этом случае полезной может стать услуга - аренда машины. Сегодня к услугам компаний, предлагающих прокат автомобилей, обращаются сотни жителей и гостей столицы. Аренда автомобилей – это не просто шанс передвигаться по городу на собственном автомобиле, это возможность продемонстрировать свой статус. Вы можете произвести впечатление на любимую девушку, прокатив ее на машине премиального класса, удивить друзей, и, наконец, ощутить чувство свободы и независимости, которые дарит управление автомобилем.
+            
+            .main-about__row.row
+              .col-480-6.col-sm-6.col-md-3
+                .main-about__block
+                  div
+                    img(src="./img/icon/icon-about-1.svg", alt="")
+                  div
+                    p ВСЕ АВТО 
+                      br
+                      | ЗАСТРАХОВАНЫ
+                      
+              .col-480-6.col-sm-6.col-md-3
+                .main-about__block
+                  div
+                    img(src="./img/icon/icon-about-3.svg", alt="")
+                  div
+                    p ДОСТАВИМ 
+                      br
+                      | МАШИНУ САМ
+                      
+              .col-480-6.col-sm-6.col-md-3
+                .main-about__block
+                  div
+                    img(src="./img/icon/icon-about-2.svg", alt="")
+                  div
+                    p ОФОРМЛЕНИЕ 
+                      br
+                      | 15 МИНУТ
+                
+              .col-480-6.col-sm-6.col-md-3
+                .main-about__block
+                  div
+                    img(src="./img/icon/icon-about-4.svg", alt="")
+                  div
+                    p ПРОКАТ БЕЗ ЗАЛОГА
+            
+            img(src="./tmp/main-about.png", alt="").img--main-about
+        
     
     include ./_include/_footer
-    div(style="height: 1000px; background-color: #000")
+    //- div(style="height: 1000px; background-color: #000")
     
     //[if gte IE 9]
       <script src='./js/libs/html5shiv/es5-shim.min.js'>
