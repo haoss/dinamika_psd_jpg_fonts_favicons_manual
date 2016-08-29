@@ -163,7 +163,7 @@
         margin-left: inherit
     &-checkbox__row
       text-align: left
-      margin-top: 3px
+      // margin-top: 3px
       padding-left: 6px
       .required-info
         &::after
@@ -233,6 +233,7 @@
         text-align: center
         &:nth-child(2)
           border-right: 1px solid $color-lightgray
+
     &__title
       text-align: left
     &__price
@@ -267,6 +268,7 @@
         &>div
           display: table-cell
           vertical-align: top
+
       &__form
         float: right
       &__bottom
@@ -277,6 +279,8 @@
             border-bottom-color: transparent
             &:nth-child(2)
               border-right-color: #dadada
+          .table
+            margin: 0 auto
 
   .main-about
     &__block
@@ -493,6 +497,8 @@
       font-size: rem(21)
       &:hover
         @include sprite($btn-right-big-hover)
+
+
 
   .car-list
     &__block
@@ -725,6 +731,9 @@
             svg
               height: 35px
 
+  .col-order-right
+    padding-top: 3px
+
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
   .container
@@ -745,6 +754,8 @@
       margin-right: -10px
     &--big-order
       margin-left: inherit
+    &--big-order-left
+      margin-left: -20px
 
   .about
     margin-top: -215px
@@ -856,3 +867,7 @@
         &__body
           &>div:first-child
             width: 143px
+
+  .order-row
+    &__bottom
+      padding-bottom: 50px

@@ -75,20 +75,20 @@
   &--prices
     @extend .btn--right-small
     @include sprite($btn-left-small)
-    &:hover
+    &:hover, &:active, &:focus
       @include sprite($btn-left-small-hover)
 
   &--big-order
     @extend .btn--right-small
     @include sprite($btn-right-big)
     font-size: rem(21)
-    &:hover
+    &:hover, &:active, &:focus
       @include sprite($btn-right-big-hover)
 
   &--more
     @extend .btn--right-small
     @include sprite($btn-left-small)
-    &:hover
+    &:hover, &:active, &:focus
       @include sprite($btn-left-small-hover)
 
   &--fast-order
@@ -108,5 +108,17 @@
 
   &--popup__order
     @extend .btn--right-small
-    &:hover
+    &:hover, &:active, &:focus
       @include sprite($btn-right-small-hover)
+
+  &--big-order-left
+    @extend .btn--right-small
+    @include sprite($btn-order-big)
+    font-size: rem(21)
+    color: $color-red
+    margin-left: auto
+    margin-right: auto
+    display: block
+    &:hover, &:active, &:focus
+      @include sprite($btn-left-big-hover)
+      color: $color-white

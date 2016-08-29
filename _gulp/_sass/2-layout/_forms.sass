@@ -67,10 +67,12 @@ button, html input[type=button], input[type=reset], input[type=submit]
 
   &-checkbox
     font-family: $font-dejavu-cond-book
-    line-height: 1
+    // line-height: 1
     position: relative
     display: inline-block
     cursor: pointer
+    padding-left: 25px
+    min-height: 18px
     [type=checkbox]
       display: none
       &+span
@@ -81,6 +83,9 @@ button, html input[type=button], input[type=reset], input[type=submit]
         position: relative
         vertical-align: middle
         margin-right: 5px
+        position: absolute
+        left: 0
+        top: 1px
         &::after
           position: absolute
           content: ''
@@ -96,11 +101,18 @@ button, html input[type=button], input[type=reset], input[type=submit]
 
       &~.span
         display: inline-block
-        vertical-align: -1px
+        vertical-align: 2px
         line-height: 1
         font-size: rem(12)
 
-
+    &--white
+      [type=checkbox]
+        &+span
+          border-color: $color-white
+        &:checked
+          &+span
+            &::after
+              background-color: $color-white
 
 textarea.form-control
   height: 130px
@@ -119,9 +131,12 @@ label
   &-warning .form-control
     border-color: #8a6d3b
 
-  &-error .form-control
-    border-color: $color-red
-    background-color: #ffd7d0
+  &-error
+    i
+      color: $color-red !important
+    .form-control
+      border-color: $color-red
+      background-color: #ffd7d0
 
   &-success .control-label
     color: #3c763d
@@ -149,9 +164,10 @@ label
     position: relative
     em
       font-family: $font-dejavu-cond-italic
+      line-height: 1.2
 
     .required-info
-      margin-bottom: 8px
+      margin-bottom: 11px
       &::after
         left: 3px
 
@@ -213,21 +229,56 @@ label
     &--auto
       display: block
       text-align: center
-
-.form-control
-  &--quantity
-    max-width: 130px
-    margin-left: auto
-    margin-right: auto
-    text-align: center
-    color: #9d9d9d
-    padding-top: 0
-    padding-bottom: 0
-    line-height: 27px
-    &.big
-      max-width: 155px
-    strong
+    &--big
+      text-align: left
+      display: block
+      text-transform: uppercase
+      font-size: rem(15)
       font-family: $font-sportword
-      font-size: rem(16)
-      display: inline-block
-      margin-right: 5px
+
+.form
+  &-control
+    &--quantity
+      max-width: 130px
+      margin-left: auto
+      margin-right: auto
+      text-align: center
+      color: #9d9d9d
+      padding-top: 0
+      padding-bottom: 0
+      line-height: 27px
+      &.big
+        max-width: 155px
+      strong
+        font-family: $font-sportword
+        font-size: rem(16)
+        display: inline-block
+        margin-right: 5px
+
+  &-group
+    &--dark
+      .required-info
+        background-color: #444444
+        &::after
+          border-top-color: #444444
+      &.has-error
+        .form-control
+          border-color: #444444
+          background-color: #444444
+          color: $color-white !important
+        ::-webkit-input-placeholder
+          color: $color-white
+        ::-moz-placeholder
+          color: $color-white
+        :-ms-input-placeholder
+          color: $color-white
+        input:-moz-placeholder
+          color: $color-white
+        i
+          color: $color-white !important
+  &-checkbox__row
+    &--dark
+      .required-info
+        background-color: #444444
+        &::after
+          border-top-color: #444444

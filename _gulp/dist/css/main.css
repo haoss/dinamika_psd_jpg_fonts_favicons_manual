@@ -4790,6 +4790,12 @@ ol.list li::before {
   .color--red {
     color: #c63d23 !important; }
 
+.no-margin {
+  margin: 0 !important; }
+
+.no-padding {
+  padding: 0 !important; }
+
 /* buttons */
 .btn {
   display: inline-block;
@@ -4842,7 +4848,7 @@ ol.list li::before {
       font-size: 1.3125rem;
       position: relative;
       top: 1px; }
-  .btn--right-small, .btn--prices, .btn--big-order, .btn--more, .btn--popup__order {
+  .btn--right-small, .btn--prices, .btn--big-order, .btn--more, .btn--popup__order, .btn--big-order-left {
     background-image: url(../img/sprite.png);
     background-position: 0px -105px;
     width: 145px;
@@ -4855,7 +4861,7 @@ ol.list li::before {
     text-transform: uppercase;
     font-family: "Sports World";
     text-decoration: none; }
-    .btn--right-small:hover, .btn--prices:hover, .btn--big-order:hover, .btn--more:hover, .btn--popup__order:hover, .btn--right-small:active, .btn--prices:active, .btn--big-order:active, .btn--more:active, .btn--popup__order:active, .btn--right-small:focus, .btn--prices:focus, .btn--big-order:focus, .btn--more:focus, .btn--popup__order:focus {
+    .btn--right-small:hover, .btn--prices:hover, .btn--big-order:hover, .btn--more:hover, .btn--popup__order:hover, .btn--big-order-left:hover, .btn--right-small:active, .btn--prices:active, .btn--big-order:active, .btn--more:active, .btn--popup__order:active, .btn--big-order-left:active, .btn--right-small:focus, .btn--prices:focus, .btn--big-order:focus, .btn--more:focus, .btn--popup__order:focus, .btn--big-order-left:focus {
       background-image: url(../img/sprite.png);
       background-position: 0px -70px;
       width: 145px;
@@ -4869,20 +4875,20 @@ ol.list li::before {
     background-position: 0px -35px;
     width: 145px;
     height: 35px; }
-    .btn--prices:hover {
+    .btn--prices:hover, .btn--prices:active, .btn--prices:focus {
       background-image: url(../img/sprite.png);
       background-position: 0px 0px;
       width: 145px;
       height: 35px; }
   .btn--big-order {
     background-image: url(../img/sprite.png);
-    background-position: 0px -420px;
+    background-position: 0px -490px;
     width: 290px;
     height: 70px;
     font-size: 1.3125rem; }
-    .btn--big-order:hover {
+    .btn--big-order:hover, .btn--big-order:active, .btn--big-order:focus {
       background-image: url(../img/sprite.png);
-      background-position: 0px -350px;
+      background-position: 0px -420px;
       width: 290px;
       height: 70px; }
   .btn--more {
@@ -4890,7 +4896,7 @@ ol.list li::before {
     background-position: 0px -35px;
     width: 145px;
     height: 35px; }
-    .btn--more:hover {
+    .btn--more:hover, .btn--more:active, .btn--more:focus {
       background-image: url(../img/sprite.png);
       background-position: 0px 0px;
       width: 145px;
@@ -4909,11 +4915,27 @@ ol.list li::before {
     border: 0; }
     .btn--fast-order:hover {
       text-decoration: underline; }
-  .btn--popup__order:hover {
+  .btn--popup__order:hover, .btn--popup__order:active, .btn--popup__order:focus {
     background-image: url(../img/sprite.png);
     background-position: 0px -70px;
     width: 145px;
     height: 35px; }
+  .btn--big-order-left {
+    background-image: url(../img/sprite.png);
+    background-position: 0px -350px;
+    width: 290px;
+    height: 70px;
+    font-size: 1.3125rem;
+    color: #c63d23;
+    margin-left: auto;
+    margin-right: auto;
+    display: block; }
+    .btn--big-order-left:hover, .btn--big-order-left:active, .btn--big-order-left:focus {
+      background-image: url(../img/sprite.png);
+      background-position: 0px -140px;
+      width: 290px;
+      height: 70px;
+      color: #fff; }
 
 /* carousel */
 .carousel ul, .carousel li {
@@ -4988,10 +5010,11 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 
 .form-checkbox {
   font-family: "DejaVuSerifCondensedBook";
-  line-height: 1;
   position: relative;
   display: inline-block;
-  cursor: pointer; }
+  cursor: pointer;
+  padding-left: 25px;
+  min-height: 18px; }
   .form-checkbox [type=checkbox] {
     display: none; }
     .form-checkbox [type=checkbox] + span {
@@ -5001,7 +5024,10 @@ button, html input[type=button], input[type=reset], input[type=submit] {
       border: 4px solid #c63d23;
       position: relative;
       vertical-align: middle;
-      margin-right: 5px; }
+      margin-right: 5px;
+      position: absolute;
+      left: 0;
+      top: 1px; }
       .form-checkbox [type=checkbox] + span::after {
         position: absolute;
         content: '';
@@ -5014,9 +5040,13 @@ button, html input[type=button], input[type=reset], input[type=submit] {
       background-color: #c63d23; }
     .form-checkbox [type=checkbox] ~ .span {
       display: inline-block;
-      vertical-align: -1px;
+      vertical-align: 2px;
       line-height: 1;
       font-size: 0.75rem; }
+  .form-checkbox--white [type=checkbox] + span {
+    border-color: #fff; }
+  .form-checkbox--white [type=checkbox]:checked + span::after {
+    background-color: #fff; }
 
 textarea.form-control {
   height: 130px;
@@ -5033,6 +5063,9 @@ label {
 
 .has-warning .form-control {
   border-color: #8a6d3b; }
+
+.has-error i {
+  color: #c63d23 !important; }
 
 .has-error .form-control {
   border-color: #c63d23;
@@ -5064,9 +5097,10 @@ label {
   margin-bottom: 15px;
   position: relative; }
   .form-checkbox__row em {
-    font-family: "DejaVuSerifCondensedItalic"; }
+    font-family: "DejaVuSerifCondensedItalic";
+    line-height: 1.2; }
   .form-checkbox__row .required-info {
-    margin-bottom: 8px; }
+    margin-bottom: 11px; }
     .form-checkbox__row .required-info::after {
       left: 3px; }
   .form-checkbox__row--contacts {
@@ -5128,6 +5162,12 @@ label {
   .label-control--auto {
     display: block;
     text-align: center; }
+  .label-control--big {
+    text-align: left;
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.9375rem;
+    font-family: "Sports World"; }
 
 .form-control--quantity {
   max-width: 130px;
@@ -5145,6 +5185,36 @@ label {
     font-size: 1rem;
     display: inline-block;
     margin-right: 5px; }
+
+.form-group--dark .required-info {
+  background-color: #444444; }
+  .form-group--dark .required-info::after {
+    border-top-color: #444444; }
+
+.form-group--dark.has-error .form-control {
+  border-color: #444444;
+  background-color: #444444;
+  color: #fff !important; }
+
+.form-group--dark.has-error ::-webkit-input-placeholder {
+  color: #fff; }
+
+.form-group--dark.has-error ::-moz-placeholder {
+  color: #fff; }
+
+.form-group--dark.has-error :-ms-input-placeholder {
+  color: #fff; }
+
+.form-group--dark.has-error input:-moz-placeholder {
+  color: #fff; }
+
+.form-group--dark.has-error i {
+  color: #fff !important; }
+
+.form-checkbox__row--dark .required-info {
+  background-color: #444444; }
+  .form-checkbox__row--dark .required-info::after {
+    border-top-color: #444444; }
 
 /* gallery */
 /* menu */
@@ -5548,7 +5618,6 @@ label {
 
 .auto__price {
   text-align: center;
-  font-family: #444444;
   font-size: 1rem;
   margin-bottom: 20px;
   font-family: "DejaVuSerifBold"; }
@@ -5563,6 +5632,10 @@ label {
     font-size: 0.75rem;
     color: #9d9d9d;
     font-family: "DejaVuSerifBook"; }
+  .auto__price--white strong {
+    color: #fff; }
+  .auto__price--white span {
+    color: #fff; }
 
 /**/
 .autopark__top {
@@ -5868,10 +5941,8 @@ label {
         .popup__order__bottom .auto__info .span {
           display: none;
           line-height: 1; }
-        .popup__order__bottom .auto__info .table {
-          margin: 0 auto; }
-          .popup__order__bottom .auto__info .table > div {
-            text-align: left; }
+        .popup__order__bottom .auto__info .table > div {
+          text-align: left; }
     .popup__order__form {
       padding-top: 20px; }
   .popup__header .h1, .popup__header h1 {
@@ -6231,24 +6302,25 @@ label {
 .order-row {
   background-color: #c63d23;
   background-repeat: repeat;
-  background-size: cover;
+  background-size: 1500px auto;
   background-image: url("../img/red-pattern.png");
   background-position: top center;
   color: #fff; }
   .order-row__form {
     min-height: 200px; }
   .order-row__title {
-    font-size: 1.625rem;
+    font-size: 1.3125rem;
     font-family: "Sports World";
-    text-transform: uppercase;
-    line-height: 1; }
+    text-transform: uppercase; }
   .order-row__top {
     padding: 14px 0;
     min-height: 55px; }
   .order-row__bottom {
     display: none;
     opacity: 0;
-    animation: displayBlock 1s ease-in-out; }
+    animation: displayBlock 1s ease-in-out;
+    padding-bottom: 20px;
+    padding-top: 20px; }
     .order-row__bottom.active {
       opacity: 1;
       display: block; }
@@ -6267,11 +6339,11 @@ label {
       font-family: "DejaVuSerifCondensedItalic";
       vertical-align: middle; }
     .order-row__button.active .order-row__radio {
-      background-color: #fff; }
+      background-color: transparent; }
       .order-row__button.active .order-row__radio::after {
-        border-color: #c63d23;
-        background-color: #fff;
-        left: 15px; }
+        border-color: #fff;
+        background-color: transparent;
+        left: 1px; }
   .order-row__radio {
     display: inline-block;
     height: 17px;
@@ -6281,17 +6353,40 @@ label {
     border-radius: 25px;
     vertical-align: middle;
     margin: 4px 0;
-    transition: all 0.2s linear; }
+    transition: all 0.2s linear;
+    background-color: #fff; }
     .order-row__radio::after {
       content: '';
       position: absolute;
-      left: 1px;
+      left: 15px;
       top: 1px;
       width: 11px;
       height: 11px;
       border-radius: 50%;
-      border: 2px solid #fff;
+      border: 2px solid #c63d23;
       transition: all 0.2s linear; }
+  .order-row__img {
+    background-color: #fff;
+    max-width: 460px;
+    border-top: 1px solid #c63d23;
+    position: relative;
+    padding: 15px;
+    margin: 0 auto 20px auto; }
+    .order-row__img img {
+      margin-left: auto;
+      margin-right: auto; }
+  .order-row__bottom-title {
+    font-size: 1.3125rem;
+    font-family: "Sports World";
+    text-transform: uppercase;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    color: #c63d23; }
+  .order-row__select {
+    margin: 0 auto;
+    max-width: 460px; }
 
 @keyframes displayBlock {
   0% {
@@ -6299,6 +6394,50 @@ label {
   100% {
     opacity: 1; } }
 
+.order-row__select {
+  position: relative; }
+  .order-row__select .jq-selectbox {
+    width: 100%; }
+  .order-row__select .jq-selectbox__select {
+    border-radius: 0;
+    height: 30px;
+    border: 0;
+    background: #fff; }
+    .order-row__select .jq-selectbox__select:hover {
+      background: #fff; }
+  .order-row__select .jq-selectbox__trigger {
+    border-left: 0; }
+  .order-row__select .jq-selectbox__trigger-arrow {
+    border-top-color: #c63d23 !important; }
+  .order-row__select .jq-selectbox__select-text {
+    font-size: 0.8125rem;
+    color: #c63d23;
+    font-family: "DejaVuSerifCondensedBold"; }
+  .order-row__select .jq-selectbox__dropdown {
+    top: 30px !important;
+    bottom: inherit !important;
+    border: 0; }
+  .order-row__select .jq-selectbox li.selected {
+    background: #c63d23; }
+  .order-row__select .jq-selectbox li:hover {
+    background: #c63d23; }
+  .order-row__select .jq-selectbox.focused .jq-selectbox__select {
+    border: 0 !important; }
+
+/**/
+.order-carousel {
+  margin-bottom: -20px;
+  position: relative;
+  z-index: 100; }
+  .order-carousel__block {
+    margin: 0 15px;
+    position: relative;
+    padding: 60px 10px 0 10px; }
+
+.owl-item.center .order-carousel__block {
+  background-color: #fff; }
+
+/**/
 /* clear */
 .clear, .clear1, .clear2, .clear3, .clear4, .clear5, .clear6, .clear7, .clear8, .clear9, .clear10, .clear11, .clear12, .clear13, .clear14, .clear15, .clear16, .clear17, .clear18, .clear19, .clear20, .clear21, .clear22, .clear23, .clear24, .clear25, .clear26, .clear27, .clear28, .clear29, .clear30, .clear31, .clear32, .clear33, .clear34, .clear35, .clear36, .clear37, .clear38, .clear39, .clear40, .clear41, .clear42, .clear43, .clear44, .clear45, .clear46, .clear47, .clear48, .clear49, .clear50, .clear51, .clear52, .clear53, .clear54, .clear55, .clear56, .clear57, .clear58, .clear59, .clear60, .clear61, .clear62, .clear63, .clear64, .clear65, .clear66, .clear67, .clear68, .clear69, .clear70, .clear71, .clear72, .clear73, .clear74, .clear75, .clear76, .clear77, .clear78, .clear79, .clear80, .clear81, .clear82, .clear83, .clear84, .clear85, .clear86, .clear87, .clear88, .clear89, .clear90, .clear91, .clear92, .clear93, .clear94, .clear95, .clear96, .clear97, .clear98, .clear99, .clear100, .clear-hr {
   background: none !important;
@@ -6739,7 +6878,6 @@ label {
     margin-left: inherit; }
   .form-checkbox__row {
     text-align: left;
-    margin-top: 3px;
     padding-left: 6px; }
     .form-checkbox__row .required-info::after {
       left: 5px; }
@@ -6834,6 +6972,8 @@ label {
         border-bottom-color: transparent; }
         .popup__order__bottom .auto__info > div:nth-child(2) {
           border-right-color: #dadada; }
+      .popup__order__bottom .auto__info .table {
+        margin: 0 auto; }
   .main-about__block {
     font-size: 0.8125rem; }
     .main-about__block img {
@@ -7017,13 +7157,13 @@ label {
       font-size: 0.875rem; }
   .btn--popup__order {
     background-image: url(../img/sprite.png);
-    background-position: 0px -420px;
+    background-position: 0px -490px;
     width: 290px;
     height: 70px;
     font-size: 1.3125rem; }
     .btn--popup__order:hover {
       background-image: url(../img/sprite.png);
-      background-position: 0px -350px;
+      background-position: 0px -420px;
       width: 290px;
       height: 70px; }
   .car-list__block {
@@ -7196,7 +7336,9 @@ label {
   .autopark__select__desctop__body ul > li > a {
     padding-top: 34px; }
     .autopark__select__desctop__body ul > li > a svg {
-      height: 35px; } }
+      height: 35px; }
+  .col-order-right {
+    padding-top: 3px; } }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
@@ -7210,6 +7352,8 @@ label {
     margin-right: -10px; }
   .btn--big-order {
     margin-left: inherit; }
+  .btn--big-order-left {
+    margin-left: -20px; }
   .about {
     margin-top: -215px;
     margin-bottom: 70px; }
@@ -7302,6 +7446,8 @@ label {
     margin-left: -15px;
     margin-right: -15px; }
     .autopark__select__desctop__body > div:first-child {
-      width: 143px; } }
+      width: 143px; }
+  .order-row__bottom {
+    padding-bottom: 50px; } }
 
 /*# sourceMappingURL=main.css.map */

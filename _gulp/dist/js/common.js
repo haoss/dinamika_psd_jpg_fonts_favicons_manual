@@ -116,6 +116,19 @@ $(document).ready(function(){
     $(this).toggleClass('active');
   })
 
+  // Styler
+  $('select.styler').styler();
+
+  // Main owl carousel
+  $('#order-carousel__body').owlCarousel({
+    center: true,
+    loop: true,
+    responsive: {
+      0: {
+        items: 1
+      }
+    }
+  })
 
   // Chrome Smooth Scroll
   try {

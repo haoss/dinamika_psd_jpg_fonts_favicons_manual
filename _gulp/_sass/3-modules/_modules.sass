@@ -262,7 +262,6 @@
 
   &__price
     text-align: center
-    font-family: $color-darkgray
     font-size: rem(16)
     margin-bottom: 20px
     font-family: $font-dejavu-serif-bold
@@ -277,6 +276,11 @@
       font-size: rem(12)
       color: #9d9d9d
       font-family: $font-dejavu-serif-book
+    &--white
+      strong
+        color: $color-white
+      span
+        color: $color-white
 
 /**/
 .autopark
@@ -610,7 +614,7 @@
           display: none
           line-height: 1
         .table
-          margin: 0 auto
+          // margin: 0 auto
           &>div
             text-align: left
 
@@ -1002,17 +1006,19 @@
   background:
     color: $color-red
     repeat: repeat
-    size: cover
+    size: 1500px auto
     image: url('../img/red-pattern.png')
     position: top center
   color: $color-white
   &__form
     min-height: 200px
+    .btn--big-order-left
+      // margin-left: -10px
   &__title
-    font-size: rem(26)
+    font-size: rem(21)
     font-family: $font-sportword
     text-transform: uppercase
-    line-height: 1
+    // line-height: 1
   &__top
     padding: 14px 0
     min-height: 55px
@@ -1020,10 +1026,13 @@
     display: none
     opacity: 0
     animation: displayBlock 1s ease-in-out
+    // transition: all 1s ease-in-out
+    padding-bottom: 20px
+    padding-top: 20px
+    // overflow: hidden
     &.active
       opacity: 1
       display: block
-
 
   &__button
     color: $color-white
@@ -1041,11 +1050,11 @@
       vertical-align: middle
     &.active
       .order-row__radio
-        background-color: $color-white
+        background-color: transparent
         &::after
-          border-color: $color-red
-          background-color: $color-white
-          left: 15px
+          border-color: $color-white
+          background-color: transparent
+          left: 1px
 
   &__radio
     display: inline-block
@@ -1057,19 +1066,92 @@
     vertical-align: middle
     margin: 4px 0
     transition: all 0.2s linear
+    background-color: $color-white
     &::after
       content: ''
       position: absolute
-      left: 1px
+      left: 15px
       top: 1px
       width: 11px
       height: 11px
       border-radius: 50%
-      border: 2px solid $color-white
+      border: 2px solid $color-red
       transition: all 0.2s linear
+
+  &__img
+    background-color: $color-white
+    max-width: 460px
+    border-top: 1px solid $color-red
+    position: relative
+    padding: 15px
+    margin: 0 auto 20px auto
+    img
+      margin-left: auto
+      margin-right: auto
+  &__bottom-title
+    font-size: rem(21)
+    font-family: $font-sportword
+    text-transform: uppercase
+    position: absolute
+    top: 15px
+    left: 15px
+    right: 15px
+    color: $color-red
+  &__select
+    margin: 0 auto
+    max-width: 460px
 
 @keyframes displayBlock
   0%
     opacity: 0
   100%
     opacity: 1
+
+.order-row__select
+  position: relative
+  .jq-selectbox
+    width: 100%
+  .jq-selectbox__select
+    border-radius: 0
+    height: 30px
+    border: 0
+    background: $color-white
+    &:hover
+      background: $color-white
+  .jq-selectbox__trigger
+    border-left: 0
+  .jq-selectbox__trigger-arrow
+    border-top-color: $color-red !important
+  .jq-selectbox__select-text
+    font-size: rem(13)
+    color: $color-red
+    font-family: $font-dejavu-cond-bold
+  .jq-selectbox__dropdown
+    top: 30px !important
+    bottom: inherit !important
+    border: 0
+  .jq-selectbox li.selected
+    background: $color-red
+  .jq-selectbox li:hover
+    background: $color-red
+  .jq-selectbox.focused .jq-selectbox__select
+    border: 0 !important
+
+/**/
+.order-carousel
+  margin-bottom: -20px
+  position: relative
+  z-index: 100
+  &__body
+
+  &__block
+    margin: 0 15px
+    position: relative
+    padding: 60px 10px 0 10px
+
+.owl-item
+  &.center
+    .order-carousel__block
+      background-color: $color-white
+
+/**/
