@@ -139,22 +139,23 @@ a, .link
 
 /* loader */
 .loader
-  width: 100vw
+  width: 100%
   height: 100vh
   left: 0
   top: 0
   position: fixed
   z-index: 10000
   background-color: $color-white
-  display: flex
-  align-items: center
-  justify-content: center
 
   &__block
     background: $color-red
     animation: load1 1s infinite ease-in-out
     width: 1em
     height: 4em
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
     &:before, &:after
       background: $color-red
       animation: load1 1s infinite ease-in-out
@@ -169,7 +170,6 @@ a, .link
       animation-delay: -0.32s
     color: $color-red
     text-indent: -9999em
-    margin: 88px auto
     position: relative
     font-size: 11px
     transform: translateZ(0)
@@ -247,6 +247,7 @@ a, .link
   padding: 50px 0
 
 .content
+  overflow: hidden
   &__body
     padding-top: 60px
     padding-bottom: 75px
@@ -283,11 +284,14 @@ a, .link
       width: 100%
       height: 100%
       z-index: 5
-      background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2) 5px, transparent 2px, transparent 100%)
-      background-image: -moz-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2) 5px, transparent 2px, transparent 100%)
-      background-image: -ms-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2) 5px, transparent 2px, transparent 100%)
-      background-image: repeating-radial-gradient(center center, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2) 5px, transparent 2px, transparent 100%)
-      background-size: 3px 3px
+      background: rgba(0,0,0,.5)
+      background-image: -webkit-repeating-linear-gradient(135deg, rgba(0,0,0,.3), rgba(0,0,0,.3) 1px, transparent 2px, transparent 2px, rgba(0,0,0,.3) 3px)
+      background-image: -moz-repeating-linear-gradient(135deg, rgba(0,0,0,.3), rgba(0,0,0,.3) 1px, transparent 2px, transparent 2px, rgba(0,0,0,.3) 3px)
+      background-image: -o-repeating-linear-gradient(135deg, rgba(0,0,0,.3), rgba(0,0,0,.3) 1px, transparent 2px, transparent 2px, rgba(0,0,0,.3) 3px)
+      background-image: repeating-linear-gradient(135deg, rgba(0,0,0,.3), rgba(0,0,0,.3) 1px, transparent 2px, transparent 2px, rgba(0,0,0,.3) 3px)
+      -webkit-background-size: 4px 4px
+      -moz-background-size: 4px 4px
+      background-size: 4px 4px
     p
       line-height: 1.35
       &:last-child

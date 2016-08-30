@@ -14,6 +14,8 @@ html(lang="ru")
     
     include ./_include/_header
     
+    include ./_include/_popup-order
+    
     // Content
     .content
       
@@ -184,94 +186,90 @@ html(lang="ru")
       .order-carousel
         #order-carousel__body.order-carousel__body
           
-          .order-carousel__block
-            .popup__order
-              div
-                .popup__header
-                  .h1 ПОПУЛЯРНЫЕ АВТОМОБИЛИ
-                  
-                .popup__order__img
-                  img(src="./tmp/cars/cars-4-big.png", alt="").img-responsive
-            
-                .popup__order__info
-                  div
-                    h2 chevrolet camaro 
-                    p
-                      em Стоимость аренды: 
-                      strong от 2700 руб./час
-                      br
-                      em Минимальный заказ: 
-                      strong 5+1
-                  
-                  div
+          - for (var i=1; i<7; i++) {
+            .order-carousel__block
+              .popup__order
+                div
+                  .popup__header
+                    .h1 ПОПУЛЯРНЫЕ АВТОМОБИЛИ
                     
-                    .popup__order__form
-                      div
-                        button(type="submit").btn.btn--popup__order Быстрый заказ
-            
-                .popup__order__bottom
-                  .auto__info
-                    div 
+                  .popup__order__img
+                    img(src="./tmp/cars/cars-" + i + "-big.png", alt="").img-responsive
+              
+                  .popup__order__info
+                    div
+                      h2 chevrolet camaro 
+                      p
+                        em Стоимость аренды: 
+                        strong от 2700 руб./час
+                        br
+                        em Минимальный заказ: 
+                        strong 5+1
                     
-                      .table
-                        div
-                          svg#icon-auto-info-1.icon(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', viewbox='0 0 13 15', width='13', height='15')
-                            image(width='13', height='15', xlink:href='data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEASABIAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAGVAAABqwAAAgf/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAA8ADQMBIgACEQEDEQH/ xACEAAEBAAAAAAAAAAAAAAAAAAADBgEBAQAAAAAAAAAAAAAAAAAABAUQAAEDBQEAAAAAAAAAAAAA AAEAAgQREhMUBRURAAECBAILAAAAAAAAAAAAAAECAwARMRIhFEFhgZEiMkITUwQFEgAABQUBAAAA AAAAAAAAAAAAARExEiFBcQIiMv/aAAwDAQACEQMRAAAAoCl2HY//2gAIAQIAAQUAyEr/2gAIAQMA AQUAEZrV/9oACAEBAAEFANuH1pWLg+sRQ3yLP//aAAgBAgIGPwBulVR//9oACAEDAgY/APRwPWMW Kt8j/9oACAEBAQY/AFK9t9tv57BKWmVrCC6vyKEwZDRHZBZymXuPGLC7fIY3VCYINRhgZjeIn0hF tByHZqrH/9k=', overflow='visible')
-                        div
-                          span.span Количество дв.
-                          | 4 двери
+                    div
                       
-                    div 
-                    
-                      .table
+                      .popup__order__form
                         div
-                          svg#icon-auto-info-2.icon(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 150 150', width='16', height='16')
-                            g
-                              path(d='M75 0C33.6 0 0 33.6 0 75s33.6 75 75 75 75-33.6 75-75S116.4 0 75 0zm0 133.4c-32.2 0-58.4-26.2-58.4-58.4S42.8 16.6 75 16.6s58.4 26.2 58.4 58.4-26.2 58.4-58.4 58.4zm0 0')
-                              path(d='M110.3 48.2c-2.6 0-4.7 2.1-4.7 4.7v17.8H91.5V52.9c0-2.6-2.1-4.7-4.7-4.7s-4.7 2.1-4.7 4.7v17.8H67.9V52.9c0-2.6-2.1-4.7-4.7-4.7s-4.7 2.1-4.7 4.7v17.8H44.4V52.9c0-2.6-2.1-4.7-4.7-4.7S35 50.3 35 52.9v20.5c0 4.6 2.8 6.6 5.4 6.6h18.1v17c0 2.6 2.1 4.7 4.7 4.7s4.7-2.1 4.7-4.7V80H82v17c0 2.6 2.1 4.7 4.7 4.7s4.7-2.1 4.7-4.7V80h14.1v17c0 2.6 2.1 4.7 4.7 4.7s4.7-2.1 4.7-4.7V52.9c.1-2.6-2-4.7-4.6-4.7zm0 0')
-                        div
-                          span.span Коробка
-                          | Автомат
+                          button(type="submit").btn.btn--popup__order Быстрый заказ
+              
+                  .popup__order__bottom
+                    .auto__info
+                      div 
                       
-                    div 
-                    
-                      .table
-                        div
-                          svg#icon-auto-info-3.icon(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', viewbox='0 0 120 150', width='11', height='14')
-                            g#g5
-                              g#g7(transform='scale(.9975 1.00402)')
-                                defs#defs9
-                                  path#SVGID_1_(d='M0 0h120.3v150H0z')
-                                clippath#SVGID_2_
-                                  use#use13(xlink:href='#SVGID_1_', width='100%', height='100%', overflow='visible')
-                                path#path15.st0(d='M117.1 3.8c-2.3-2.4-5.4-3.8-8.8-3.8h-9.4C92 0 85.3 5.6 84.1 12.4l-.6 3.4c-.6 3.4.2 6.6 2.3 9.1 2.1 2.4 5.1 3.8 8.5 3.8h12.2c1.7 0 3.3-.3 4.8-.9l-1.3 11c-1.2-.5-2.6-.8-4-.8H92.1c-5.9 0-11.8 4.7-13 10.5l-12.3 57.8-57.9-4.2c-3.1-.2-5.7.8-7.4 2.9-1.5 1.9-2 4.6-1.2 7.4L7.1 139c1.5 5.7 7.5 10.4 13.4 10.4h74c6 0 11.4-4.9 12-10.8l9.5-89.5c.1-.5.1-1 0-1.5l3.3-27.8c.5-1.2.7-2.5.8-3.8l.2-3.1c.2-3.4-.9-6.7-3.2-9.1zm0 0', clip-path='url(#SVGID_2_)')
-                        div
-                          span.span Мест в салоне
-                          | 5 мест
-                          
-                    div 
-                    
-                      .table
-                        div
-                          svg#icon-auto-info-4.icon(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', viewbox='0 0 130 150', width='13', height='15')
-                            style#style3.
-                              .st0{clip-path:url(#SVGID_2_);}
-                            g#g5
-                              g#g7(transform='scale(1.00288 1.00334)')
-                                defs#defs9
-                                  path#SVGID_1_(d='M0 0h130v150H0z')
-                                clippath#SVGID_2_
-                                  use#use13(xlink:href='#SVGID_1_', width='100%', height='100%', overflow='visible')
-                                path#path15.st0(d='M124.6 103.1c-11.4 0-20.6-13.1-20.6-29.3 0-16.2 9.3-29.3 20.6-29.3 1.8 0 3.5-1 4.4-2.6.9-1.6.8-3.5-.1-5.1l-13.5-22.2c-.8-1.3-2.2-2.2-3.7-2.4-1.5-.2-3 .3-4.1 1.4-4.7 4.7-12.4 4.7-17.1 0C88.2 11.3 87 8.3 87 5c0-2.8-2.2-5-5-5H47.7c-2.8 0-5 2.3-5 5 0 3.2-1.3 6.3-3.5 8.6-4.7 4.7-12.4 4.7-17.1 0-1.1-1.1-2.6-1.6-4.1-1.4-1.5.2-2.9 1.1-3.7 2.4L.7 36.9c-.9 1.6-1 3.5-.1 5.1.9 1.6 2.6 2.6 4.4 2.6 11.4 0 20.6 13.1 20.6 29.3 0 16.2-9.2 29.2-20.6 29.2-1.7 0-3.3.9-4.2 2.3-.9 1.4-1 3.3-.3 4.8L9 128.8c.9 2 3.1 3.2 5.3 2.9.4-.1 35.7-5.1 45.7 15 .8 1.7 2.5 2.7 4.4 2.8 1.9 0 3.6-1 4.4-2.7 10.8-20.5 46.2-16.5 46.5-16.5 2.1.3 4.1-.8 5.1-2.7l8.5-17.2c.8-1.6.7-3.4-.2-4.9-.8-1.5-2.4-2.4-4.1-2.4zm-56.3 13.6c0 1.9-1.6 3.5-3.5 3.5s-3.5-1.6-3.5-3.5v-2.3c0-1.9 1.6-3.5 3.5-3.5s3.5 1.6 3.5 3.5v2.3zm0-16.8c0 1.9-1.6 3.5-3.5 3.5s-3.5-1.6-3.5-3.5v-4.2c0-1.9 1.6-3.5 3.5-3.5s3.5 1.6 3.5 3.5v4.2zm0-18.9c0 1.9-1.6 3.5-3.5 3.5s-3.5-1.6-3.5-3.5v-4.2c0-1.9 1.6-3.5 3.5-3.5s3.5 1.6 3.5 3.5V81zm0-18.8c0 1.9-1.6 3.5-3.5 3.5s-3.5-1.6-3.5-3.5V58c0-1.9 1.6-3.5 3.5-3.5s3.5 1.6 3.5 3.5v4.2zm0-18.8c0 1.9-1.6 3.5-3.5 3.5s-3.5-1.6-3.5-3.5v-4.2c0-1.9 1.6-3.5 3.5-3.5s3.5 1.6 3.5 3.5v4.2zm0-18.8c0 1.9-1.6 3.5-3.5 3.5s-3.5-1.6-3.5-3.5v-2.3c0-1.9 1.6-3.5 3.5-3.5s3.5 1.6 3.5 3.5v2.3zm0 0', clip-path='url(#SVGID_2_)')
-                        div
-                          span.span Салон
-                          | кожанный
-
-          .order-carousel__block 2
-          .order-carousel__block 3
-          .order-carousel__block 4
-          .order-carousel__block 5
-          .order-carousel__block 6
+                        .table
+                          div
+                            svg.icon-auto-info-1.icon(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', viewbox='0 0 13 15', width='13', height='15')
+                              image(width='13', height='15', xlink:href='data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEASABIAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAGVAAABqwAAAgf/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAA8ADQMBIgACEQEDEQH/ xACEAAEBAAAAAAAAAAAAAAAAAAADBgEBAQAAAAAAAAAAAAAAAAAABAUQAAEDBQEAAAAAAAAAAAAA AAEAAgQREhMUBRURAAECBAILAAAAAAAAAAAAAAECAwARMRIhFEFhgZEiMkITUwQFEgAABQUBAAAA AAAAAAAAAAAAARExEiFBcQIiMv/aAAwDAQACEQMRAAAAoCl2HY//2gAIAQIAAQUAyEr/2gAIAQMA AQUAEZrV/9oACAEBAAEFANuH1pWLg+sRQ3yLP//aAAgBAgIGPwBulVR//9oACAEDAgY/APRwPWMW Kt8j/9oACAEBAQY/AFK9t9tv57BKWmVrCC6vyKEwZDRHZBZymXuPGLC7fIY3VCYINRhgZjeIn0hF tByHZqrH/9k=', overflow='visible')
+                          div
+                            span.span Количество дв.
+                            | 4 двери
+                        
+                      div 
+                      
+                        .table
+                          div
+                            svg.icon-auto-info-2.icon(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 150 150', width='16', height='16')
+                              g
+                                path(d='M75 0C33.6 0 0 33.6 0 75s33.6 75 75 75 75-33.6 75-75S116.4 0 75 0zm0 133.4c-32.2 0-58.4-26.2-58.4-58.4S42.8 16.6 75 16.6s58.4 26.2 58.4 58.4-26.2 58.4-58.4 58.4zm0 0')
+                                path(d='M110.3 48.2c-2.6 0-4.7 2.1-4.7 4.7v17.8H91.5V52.9c0-2.6-2.1-4.7-4.7-4.7s-4.7 2.1-4.7 4.7v17.8H67.9V52.9c0-2.6-2.1-4.7-4.7-4.7s-4.7 2.1-4.7 4.7v17.8H44.4V52.9c0-2.6-2.1-4.7-4.7-4.7S35 50.3 35 52.9v20.5c0 4.6 2.8 6.6 5.4 6.6h18.1v17c0 2.6 2.1 4.7 4.7 4.7s4.7-2.1 4.7-4.7V80H82v17c0 2.6 2.1 4.7 4.7 4.7s4.7-2.1 4.7-4.7V80h14.1v17c0 2.6 2.1 4.7 4.7 4.7s4.7-2.1 4.7-4.7V52.9c.1-2.6-2-4.7-4.6-4.7zm0 0')
+                          div
+                            span.span Коробка
+                            | Автомат
+                        
+                      div 
+                      
+                        .table
+                          div
+                            svg.icon-auto-info-3.icon(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', viewbox='0 0 120 150', width='11', height='14')
+                              g#g5
+                                g#g7(transform='scale(.9975 1.00402)')
+                                  defs#defs9
+                                    path#SVGID_1_(d='M0 0h120.3v150H0z')
+                                  clippath#SVGID_2_
+                                    use#use13(xlink:href='#SVGID_1_', width='100%', height='100%', overflow='visible')
+                                  path#path15.st0(d='M117.1 3.8c-2.3-2.4-5.4-3.8-8.8-3.8h-9.4C92 0 85.3 5.6 84.1 12.4l-.6 3.4c-.6 3.4.2 6.6 2.3 9.1 2.1 2.4 5.1 3.8 8.5 3.8h12.2c1.7 0 3.3-.3 4.8-.9l-1.3 11c-1.2-.5-2.6-.8-4-.8H92.1c-5.9 0-11.8 4.7-13 10.5l-12.3 57.8-57.9-4.2c-3.1-.2-5.7.8-7.4 2.9-1.5 1.9-2 4.6-1.2 7.4L7.1 139c1.5 5.7 7.5 10.4 13.4 10.4h74c6 0 11.4-4.9 12-10.8l9.5-89.5c.1-.5.1-1 0-1.5l3.3-27.8c.5-1.2.7-2.5.8-3.8l.2-3.1c.2-3.4-.9-6.7-3.2-9.1zm0 0', clip-path='url(#SVGID_2_)')
+                          div
+                            span.span Мест в салоне
+                            | 5 мест
+                            
+                      div 
+                      
+                        .table
+                          div
+                            svg.icon-auto-info-4.icon(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', viewbox='0 0 130 150', width='13', height='15')
+                              style#style3.
+                                .st0{clip-path:url(#SVGID_2_);}
+                              g#g5
+                                g#g7(transform='scale(1.00288 1.00334)')
+                                  defs#defs9
+                                    path#SVGID_1_(d='M0 0h130v150H0z')
+                                  clippath#SVGID_2_
+                                    use#use13(xlink:href='#SVGID_1_', width='100%', height='100%', overflow='visible')
+                                  path#path15.st0(d='M124.6 103.1c-11.4 0-20.6-13.1-20.6-29.3 0-16.2 9.3-29.3 20.6-29.3 1.8 0 3.5-1 4.4-2.6.9-1.6.8-3.5-.1-5.1l-13.5-22.2c-.8-1.3-2.2-2.2-3.7-2.4-1.5-.2-3 .3-4.1 1.4-4.7 4.7-12.4 4.7-17.1 0C88.2 11.3 87 8.3 87 5c0-2.8-2.2-5-5-5H47.7c-2.8 0-5 2.3-5 5 0 3.2-1.3 6.3-3.5 8.6-4.7 4.7-12.4 4.7-17.1 0-1.1-1.1-2.6-1.6-4.1-1.4-1.5.2-2.9 1.1-3.7 2.4L.7 36.9c-.9 1.6-1 3.5-.1 5.1.9 1.6 2.6 2.6 4.4 2.6 11.4 0 20.6 13.1 20.6 29.3 0 16.2-9.2 29.2-20.6 29.2-1.7 0-3.3.9-4.2 2.3-.9 1.4-1 3.3-.3 4.8L9 128.8c.9 2 3.1 3.2 5.3 2.9.4-.1 35.7-5.1 45.7 15 .8 1.7 2.5 2.7 4.4 2.8 1.9 0 3.6-1 4.4-2.7 10.8-20.5 46.2-16.5 46.5-16.5 2.1.3 4.1-.8 5.1-2.7l8.5-17.2c.8-1.6.7-3.4-.2-4.9-.8-1.5-2.4-2.4-4.1-2.4zm-56.3 13.6c0 1.9-1.6 3.5-3.5 3.5s-3.5-1.6-3.5-3.5v-2.3c0-1.9 1.6-3.5 3.5-3.5s3.5 1.6 3.5 3.5v2.3zm0-16.8c0 1.9-1.6 3.5-3.5 3.5s-3.5-1.6-3.5-3.5v-4.2c0-1.9 1.6-3.5 3.5-3.5s3.5 1.6 3.5 3.5v4.2zm0-18.9c0 1.9-1.6 3.5-3.5 3.5s-3.5-1.6-3.5-3.5v-4.2c0-1.9 1.6-3.5 3.5-3.5s3.5 1.6 3.5 3.5V81zm0-18.8c0 1.9-1.6 3.5-3.5 3.5s-3.5-1.6-3.5-3.5V58c0-1.9 1.6-3.5 3.5-3.5s3.5 1.6 3.5 3.5v4.2zm0-18.8c0 1.9-1.6 3.5-3.5 3.5s-3.5-1.6-3.5-3.5v-4.2c0-1.9 1.6-3.5 3.5-3.5s3.5 1.6 3.5 3.5v4.2zm0-18.8c0 1.9-1.6 3.5-3.5 3.5s-3.5-1.6-3.5-3.5v-2.3c0-1.9 1.6-3.5 3.5-3.5s3.5 1.6 3.5 3.5v2.3zm0 0', clip-path='url(#SVGID_2_)')
+                          div
+                            span.span Салон
+                            | кожанный
+          - }
       
       // Rent terms
       .rent-terms

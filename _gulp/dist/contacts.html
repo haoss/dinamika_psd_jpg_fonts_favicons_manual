@@ -106,7 +106,7 @@
                             <div class="contacts__info__body">
                                 <div>
                                     <div class="contacts__block">
-                                        <div><img src="./img/icon/icon-contacts-1.svg" alt="" width="51"></div>
+                                        <div><img src="./img/icon/icon-contacts-1.svg" alt="" width="51" height="51"></div>
                                         <div>
                                             <h4>Адрес</h4>
                                             <p>г. Москва, ул. Первая, д. 2, оф. 3</p>
@@ -115,7 +115,7 @@
                                 </div>
                                 <div>
                                     <div class="contacts__block">
-                                        <div><img src="./img/icon/icon-contacts-2.svg" alt="" width="52"></div>
+                                        <div><img src="./img/icon/icon-contacts-2.svg" alt="" width="52" height="51"></div>
                                         <div>
                                             <h4>Телефон</h4>
                                             <p>+7 499 888 76 67</p>
@@ -124,7 +124,7 @@
                                 </div>
                                 <div>
                                     <div class="contacts__block">
-                                        <div><img src="./img/icon/icon-contacts-3.svg" alt="" width="48"></div>
+                                        <div><img src="./img/icon/icon-contacts-3.svg" alt="" width="48" height="48"></div>
                                         <div>
                                             <h4>E-mail</h4>
                                             <p>info@site-name.ru</p>
@@ -138,7 +138,8 @@
                         <div class="contacts__form">
                             <div class="container">
                                 <div class="contacts__form__row row">
-                                    <div class="col-md-5"><img src="./img/contacts-logo.png" alt="" class="contacts__logo img-responsive"></div>
+                                    <div class="col-md-5">
+                                    </div>
                                     <div class="col-md-7">
                                         <div class="form__body">
                                             <form action="#">
@@ -197,13 +198,13 @@
                                   disableDefaultUI: true
                                 }
                                 var map = new google.maps.Map(document.getElementById('map_canvas'), map_options)
-                                //- var myIcon = new google.maps.MarkerImage('images/map_icon.png', null, null, null, new google.maps.Size(36,54));
+                                var myIcon = new google.maps.MarkerImage('img/contacts-logo.png', null, null, null, new google.maps.Size(277,140));
                                 var marker = new google.maps.Marker({
                                   position: myLatlng,
                                   map: map,
-                                  //- icon: myIcon
+                                  icon: myIcon
                                 });
-                                marker.setMap(null);
+                                //- marker.setMap(null);
                                 /* Remove if you dont want B/W Google Map */
                                 
                                 var styles = [

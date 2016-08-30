@@ -121,11 +121,23 @@ $(document).ready(function(){
 
   // Main owl carousel
   $('#order-carousel__body').owlCarousel({
-    center: true,
-    loop: true,
+    autoplayTimeout: 4000,
+    // autoplay: true,
+    nav: true,
+    dots: false,
+    navText: [],
     responsive: {
       0: {
-        items: 1
+        items: 1,
+        center: true,
+        loop: true
+      },
+      1200: {
+        items: 3,
+        autoWidth: true,
+        merge: true,
+        center: true,
+        loop: true
       }
     }
   })

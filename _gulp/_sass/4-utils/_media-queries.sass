@@ -309,6 +309,11 @@
       width: 72px
       padding-left: 12px
 
+  .order-carousel
+    .popup__order__img
+      img
+        max-height: 130px
+
 @media (min-width: 480px) and (max-width: 767px)
   .col
     &-480-5, &-480-6, &-480-7
@@ -415,7 +420,7 @@
     &__body
       margin-left: auto
       margin-right: auto
-      margin-top: 235px
+      margin-top: 302px
       padding-left: 27px
       padding-right: 27px
 
@@ -547,6 +552,22 @@
             svg
               height: 35px
 
+  .order-carousel
+    .popup__order__img
+      img
+        max-height: 200px
+    .icon-auto-info-1
+      width: 22px
+      height: 25px
+    .icon-auto-info-2
+      width: 30px
+      height: 30px
+    .icon-auto-info-3
+      width: 24px
+      height: 30px
+    .icon-auto-info-4
+      width: 26px
+      height: 30px
 
 @media (min-width : 768px) and (max-width: 991px)
   .contacts
@@ -734,6 +755,12 @@
   .col-order-right
     padding-top: 3px
 
+  .order-carousel
+    .popup__order__img
+      img
+        max-height: 260px
+
+
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
   .container
@@ -871,3 +898,13 @@
   .order-row
     &__bottom
       padding-bottom: 50px
+  .order-carousel
+    .owl-item
+      width: 1170px !important
+  .owl-controls
+    display: block
+
+  .order-carousel
+    &:hover
+      .owl-controls
+        opacity: 1

@@ -47,7 +47,7 @@ html(lang="ru")
                   
                   .contacts__block
                     div
-                      img(src="./img/icon/icon-contacts-1.svg", alt="" width="51")
+                      img(src="./img/icon/icon-contacts-1.svg", alt="" width="51" height="51")
                     div
                       h4 Адрес
                       p г. Москва, ул. Первая, д. 2, оф. 3
@@ -56,7 +56,7 @@ html(lang="ru")
                   
                   .contacts__block
                     div
-                      img(src="./img/icon/icon-contacts-2.svg", alt="" width="52")
+                      img(src="./img/icon/icon-contacts-2.svg", alt="" width="52" height="51")
                     div
                       h4 Телефон
                       p +7 499 888 76 67
@@ -65,7 +65,7 @@ html(lang="ru")
                   
                   .contacts__block
                     div
-                      img(src="./img/icon/icon-contacts-3.svg", alt="" width="48")
+                      img(src="./img/icon/icon-contacts-3.svg", alt="" width="48" height="48")
                     div
                       h4 E-mail
                       p info@site-name.ru
@@ -76,7 +76,7 @@ html(lang="ru")
                 
                 .contacts__form__row.row
                   .col-md-5
-                    img(src="./img/contacts-logo.png", alt="").contacts__logo.img-responsive
+                    //- img(src="./img/contacts-logo.png", alt="").contacts__logo.img-responsive
                   
                   .col-md-7
                     .form__body
@@ -126,13 +126,13 @@ html(lang="ru")
                   disableDefaultUI: true
                 }
                 var map = new google.maps.Map(document.getElementById('map_canvas'), map_options)
-                //- var myIcon = new google.maps.MarkerImage('images/map_icon.png', null, null, null, new google.maps.Size(36,54));
+                var myIcon = new google.maps.MarkerImage('img/contacts-logo.png', null, null, null, new google.maps.Size(277,140));
                 var marker = new google.maps.Marker({
                   position: myLatlng,
                   map: map,
-                  //- icon: myIcon
+                  icon: myIcon
                 });
-                marker.setMap(null);
+                //- marker.setMap(null);
                 /* Remove if you dont want B/W Google Map */
                 
                 var styles = [
