@@ -328,7 +328,8 @@
     &__block
       height: 365px
     &__auto
-      max-height: 254px
+      img
+        max-height: 254px
     &__smoke
       width: 190px
       bottom: 232px
@@ -336,6 +337,11 @@
     &__human
       max-height: 90%
       left: 25px
+
+  .main-about__row
+    &>div:nth-child(1), &>div:nth-child(2)
+      .main-about__block
+        margin-bottom: 55px
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px)
@@ -500,10 +506,8 @@
     &--popup__order
       @include sprite($btn-right-big)
       font-size: rem(21)
-      &:hover
+      &:hover, &:focus, &:active
         @include sprite($btn-right-big-hover)
-
-
 
   .car-list
     &__block
@@ -515,7 +519,8 @@
         float: none
         height: 555px
         .car-list__auto
-          max-height: 385px
+          img
+            max-height: 385px
         .car-list__human
           max-height: 95%
         .car-list__smoke
@@ -524,7 +529,8 @@
           left: 235px
 
     &__auto
-      max-height: 195px
+      img
+        max-height: 195px
     &__human
       max-height: 90%
 
@@ -569,6 +575,18 @@
       width: 26px
       height: 30px
 
+  .popup__header
+    .h1, h1
+      font-size: rem(35)
+  .content
+    &__head
+      &--terms, &--main-about
+        .h1, h1
+          font-size: rem(35)
+  .main-news__body
+    .h1, h1
+      font-size: rem(35) !important
+
 @media (min-width : 768px) and (max-width: 991px)
   .contacts
     &__block
@@ -579,6 +597,9 @@
   .contacts__block
     &>div:not(:first-child)
       padding-left: 0
+
+  .main-about__block > div:first-child
+    width: 55px
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
@@ -596,7 +617,7 @@
   .header
     height: 168px
     &__logo
-      width: 256px
+      width: 257px
       margin-left: -128px
       top: 44px
 
@@ -706,13 +727,15 @@
       &--big
         height: 362px
         .car-list__auto
-          max-height: 255px
+          img
+            max-height: 255px
         .car-list__smoke
           width: 192px
           bottom: 246px
           left: 158px
     &__auto
-      max-height: 115px
+      img
+        max-height: 115px
     &__title
       &__top
         width: 180px
@@ -760,6 +783,13 @@
       img
         max-height: 260px
 
+  .content
+    &__head
+      &--terms, &--main-about
+        .h1, h1
+          max-width: 80%
+          margin-left: auto
+          margin-right: auto
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
@@ -782,7 +812,7 @@
     &--big-order
       margin-left: inherit
     &--big-order-left
-      margin-left: -20px
+      margin-left: -26px
 
   .about
     margin-top: -215px
@@ -827,7 +857,8 @@
       &--big
         height: 720px
         .car-list__auto
-          max-height: 505px
+          img
+            max-height: 505px
         .car-list__smoke
           width: auto
           bottom: 489px
@@ -835,7 +866,8 @@
         .car-list__human
           left: 90px
     &__auto
-      max-height: 255px
+      img
+        max-height: 255px
     &__title
       &__top
         width: 230px
@@ -862,6 +894,8 @@
     &__body
       padding-left: 15px
       padding-right: 15px
+      margin-left: -15px
+      margin-right: -15px
     &__block
       max-width: inherit
       &:hover
@@ -899,6 +933,7 @@
     &__bottom
       padding-bottom: 50px
   .order-carousel
+    padding: 0
     .owl-item
       width: 1170px !important
   .owl-controls
@@ -908,3 +943,13 @@
     &:hover
       .owl-controls
         opacity: 1
+
+  .order-row__form
+    width: 1042px !important
+    margin: 0 auto
+    .col-md-6
+      width: auto
+    .col-md-6.col-order-right
+      width: 585px !important
+    .form-checkbox
+      width: 215px

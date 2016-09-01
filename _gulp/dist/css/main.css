@@ -4625,7 +4625,7 @@ a, .link {
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
-    color: #fff;
+    color: #f2f2f2;
     padding: 60px 0;
     min-height: 180px;
     display: -ms-flexbox;
@@ -4672,11 +4672,11 @@ a, .link {
       left: 50%;
       background-color: #c63d23; }
     .content__head--top .h1, .content__head--top h1 {
-      color: #fff; }
+      color: #f2f2f2; }
     .content__head--terms, .content__head--main-about {
       margin-bottom: 70px; }
       .content__head--terms .h1, .content__head--terms h1, .content__head--main-about .h1, .content__head--main-about h1 {
-        color: #fff;
+        color: #f2f2f2;
         font-size: 1.875rem; }
     .content__head--main-about {
       margin-bottom: 45px; }
@@ -5173,14 +5173,15 @@ label {
   color: #9d9d9d;
   padding-top: 0;
   padding-bottom: 0;
-  line-height: 27px; }
+  line-height: 32px; }
   .form-control--quantity.big {
     max-width: 155px; }
   .form-control--quantity strong {
     font-family: "Sports World";
     font-size: 1rem;
     display: inline-block;
-    margin-right: 5px; }
+    margin-right: 5px;
+    line-height: 0; }
 
 .form-group--dark .required-info {
   background-color: #444444; }
@@ -5224,7 +5225,7 @@ label {
     list-style: none;
     margin: 0; }
     .navigation > ul > li > a, .navigation > ul > li > span {
-      color: #fff;
+      color: #e6e9ec;
       text-decoration: none;
       transition: color 0.5s ease-in-out;
       display: block; }
@@ -5607,7 +5608,8 @@ label {
     vertical-align: -3px;
     margin-right: 7px; }
     .auto__info .icon g {
-      fill: #c63d23; }
+      fill: #c63d23;
+      transition: all 0.5s linear; }
 
 .auto__title {
   text-align: center; }
@@ -5618,7 +5620,7 @@ label {
   margin-bottom: 20px;
   font-family: "DejaVuSerifBold"; }
   .auto__price strong {
-    font-size: 1.375rem;
+    font-size: 1.75rem;
     color: #c63d23;
     font-family: "Sports World";
     display: inline-block;
@@ -5652,9 +5654,13 @@ label {
   transition: background 0.5s linear; }
   .autopark__block:hover {
     background-color: #f2f2f2; }
+    .autopark__block:hover .auto__info .icon g {
+      fill: #c63d23; }
   .autopark__block .auto__info {
     margin: 20px auto 0 auto;
     max-width: 230px; }
+    .autopark__block .auto__info .icon g {
+      fill: #cfcfcf; }
   .autopark__block h2 {
     font-size: 1.3125rem;
     margin-bottom: 10px; }
@@ -5960,13 +5966,6 @@ label {
   width: 100%;
   float: none; }
 
-.car-list__auto {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  max-width: 100%;
-  max-height: 175px; }
-
 .car-list__human {
   position: absolute;
   left: 15px;
@@ -5989,13 +5988,19 @@ label {
 
 .car-list__auto {
   position: absolute;
-  max-width: 100%;
-  height: auto;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-  transition: -webkit-filter 0.7s ease-in-out;
-  transition: filter 0.7s ease-in-out;
-  transition: filter 0.7s ease-in-out, -webkit-filter 0.7s ease-in-out; }
+  right: 0;
+  bottom: 0; }
+  .car-list__auto img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+    transition: -webkit-filter 0.7s ease-in-out;
+    transition: filter 0.7s ease-in-out;
+    transition: filter 0.7s ease-in-out, -webkit-filter 0.7s ease-in-out;
+    max-width: 100%;
+    max-height: 175px; }
 
 .car-list__block {
   width: 100%;
@@ -6051,7 +6056,8 @@ label {
       display: block;
       font-family: "Sports World";
       line-height: 1;
-      margin-bottom: 3px; }
+      margin-bottom: 3px;
+      text-transform: uppercase; }
     .car-list__title__top span {
       font-size: 0.625rem;
       display: block;
@@ -6115,7 +6121,7 @@ label {
 
 .terms {
   text-align: center;
-  color: #fff; }
+  color: #f2f2f2; }
   .terms__img {
     background-color: #c63d23;
     width: 122px;
@@ -6160,7 +6166,7 @@ label {
     background-image: url("../img/dark-pattern.png");
     background-size: cover; }
   .main-about__body {
-    color: #fff;
+    color: #f2f2f2;
     text-align: center; }
   .main-about__block {
     display: table;
@@ -6183,7 +6189,11 @@ label {
       max-width: 54px;
       width: auto; }
     .main-about__block p {
-      margin: 0; }
+      margin: 0;
+      line-height: 1.3; }
+  .main-about__row {
+    padding-bottom: 20px;
+    padding-top: 20px; }
 
 .rent-terms {
   background: rgba(0, 0, 0, 0.5);
@@ -6201,7 +6211,7 @@ label {
   background-color: #dcdddd; }
   .main-news__body {
     background-color: #f2f2f2;
-    padding: 65px 10px 50px 10px;
+    padding: 55px 10px 50px 10px;
     position: relative;
     z-index: 100;
     margin: -20px 0; }
@@ -6423,14 +6433,19 @@ label {
 
 /**/
 .order-carousel {
-  margin-bottom: -20px;
-  position: relative;
-  z-index: 100; }
+  padding: 0 15px;
+  background: #dcdddd; }
+  .order-carousel__body {
+    position: relative;
+    z-index: 100 !important;
+    margin-bottom: -20px; }
   .order-carousel__block {
-    margin: 0 15px;
     position: relative;
     padding: 50px 10px 0 10px;
     transition: all 0.3s ease; }
+    .order-carousel__block .popup__header {
+      opacity: 0;
+      transition: all 0.2s linear; }
   .order-carousel .popup__order__img img {
     max-height: 80px;
     width: auto !important; }
@@ -6442,7 +6457,9 @@ label {
     transition: all 0.2s linear; }
 
 .owl-item.center .order-carousel__block {
-  background-color: #fff; }
+  background-color: #f2f2f2; }
+  .owl-item.center .order-carousel__block .popup__header {
+    opacity: 1; }
 
 .owl-item.center .popup__order__bottom {
   opacity: 1;
@@ -6471,7 +6488,7 @@ label {
       height: 54px;
       width: 54px;
       border-radius: 50%;
-      background: #f2f2f2;
+      background: #fff;
       color: #444444;
       font-family: "Ionicons";
       transition: all 0.5s ease;
@@ -6497,6 +6514,9 @@ label {
       top: 0; }
       .owl-controls .owl-nav .owl-next::before {
         content: "\f125"; }
+
+.main-news__body .h1, .main-news__body h1 {
+  font-size: 1.875rem !important; }
 
 /* clear */
 .clear, .clear1, .clear2, .clear3, .clear4, .clear5, .clear6, .clear7, .clear8, .clear9, .clear10, .clear11, .clear12, .clear13, .clear14, .clear15, .clear16, .clear17, .clear18, .clear19, .clear20, .clear21, .clear22, .clear23, .clear24, .clear25, .clear26, .clear27, .clear28, .clear29, .clear30, .clear31, .clear32, .clear33, .clear34, .clear35, .clear36, .clear37, .clear38, .clear39, .clear40, .clear41, .clear42, .clear43, .clear44, .clear45, .clear46, .clear47, .clear48, .clear49, .clear50, .clear51, .clear52, .clear53, .clear54, .clear55, .clear56, .clear57, .clear58, .clear59, .clear60, .clear61, .clear62, .clear63, .clear64, .clear65, .clear66, .clear67, .clear68, .clear69, .clear70, .clear71, .clear72, .clear73, .clear74, .clear75, .clear76, .clear77, .clear78, .clear79, .clear80, .clear81, .clear82, .clear83, .clear84, .clear85, .clear86, .clear87, .clear88, .clear89, .clear90, .clear91, .clear92, .clear93, .clear94, .clear95, .clear96, .clear97, .clear98, .clear99, .clear100, .clear-hr {
@@ -7065,7 +7085,7 @@ label {
     width: 58.33333333%; }
   .car-list__block {
     height: 365px; }
-  .car-list__auto {
+  .car-list__auto img {
     max-height: 254px; }
   .car-list__smoke {
     width: 190px;
@@ -7073,7 +7093,9 @@ label {
     left: 160px; }
   .car-list__human {
     max-height: 90%;
-    left: 25px; } }
+    left: 25px; }
+  .main-about__row > div:nth-child(1) .main-about__block, .main-about__row > div:nth-child(2) .main-about__block {
+    margin-bottom: 55px; } }
 
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) {
@@ -7223,7 +7245,7 @@ label {
     width: 290px;
     height: 70px;
     font-size: 1.3125rem; }
-    .btn--popup__order:hover {
+    .btn--popup__order:hover, .btn--popup__order:focus, .btn--popup__order:active {
       background-image: url(../img/sprite.png);
       background-position: 0px -420px;
       width: 290px;
@@ -7236,7 +7258,7 @@ label {
       width: 100%;
       float: none;
       height: 555px; }
-      .car-list__block--big .car-list__auto {
+      .car-list__block--big .car-list__auto img {
         max-height: 385px; }
       .car-list__block--big .car-list__human {
         max-height: 95%; }
@@ -7244,7 +7266,7 @@ label {
         width: 296px;
         bottom: 374px;
         left: 235px; }
-  .car-list__auto {
+  .car-list__auto img {
     max-height: 195px; }
   .car-list__human {
     max-height: 90%; }
@@ -7276,13 +7298,21 @@ label {
     height: 30px; }
   .order-carousel .icon-auto-info-4 {
     width: 26px;
-    height: 30px; } }
+    height: 30px; }
+  .popup__header .h1, .popup__header h1 {
+    font-size: 2.1875rem; }
+  .content__head--terms .h1, .content__head--terms h1, .content__head--main-about .h1, .content__head--main-about h1 {
+    font-size: 2.1875rem; }
+  .main-news__body .h1, .main-news__body h1 {
+    font-size: 2.1875rem !important; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .contacts__block > div:first-child {
     display: none; }
   .contacts__block > div:not(:first-child) {
-    padding-left: 0; } }
+    padding-left: 0; }
+  .main-about__block > div:first-child {
+    width: 55px; } }
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width: 992px) {
@@ -7295,7 +7325,7 @@ label {
   .header {
     height: 168px; }
     .header__logo {
-      width: 256px;
+      width: 257px;
       margin-left: -128px;
       top: 44px; }
   .navigation > ul {
@@ -7380,13 +7410,13 @@ label {
     height: 181px; }
     .car-list__block--big {
       height: 362px; }
-      .car-list__block--big .car-list__auto {
+      .car-list__block--big .car-list__auto img {
         max-height: 255px; }
       .car-list__block--big .car-list__smoke {
         width: 192px;
         bottom: 246px;
         left: 158px; }
-  .car-list__auto {
+  .car-list__auto img {
     max-height: 115px; }
   .car-list__title__top {
     width: 180px;
@@ -7416,7 +7446,11 @@ label {
   .col-order-right {
     padding-top: 3px; }
   .order-carousel .popup__order__img img {
-    max-height: 260px; } }
+    max-height: 260px; }
+  .content__head--terms .h1, .content__head--terms h1, .content__head--main-about .h1, .content__head--main-about h1 {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto; } }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
@@ -7431,7 +7465,7 @@ label {
   .btn--big-order {
     margin-left: inherit; }
   .btn--big-order-left {
-    margin-left: -20px; }
+    margin-left: -26px; }
   .about {
     margin-top: -215px;
     margin-bottom: 70px; }
@@ -7464,7 +7498,7 @@ label {
     height: 360px; }
     .car-list__block--big {
       height: 720px; }
-      .car-list__block--big .car-list__auto {
+      .car-list__block--big .car-list__auto img {
         max-height: 505px; }
       .car-list__block--big .car-list__smoke {
         width: auto;
@@ -7472,7 +7506,7 @@ label {
         left: 376px; }
       .car-list__block--big .car-list__human {
         left: 90px; }
-  .car-list__auto {
+  .car-list__auto img {
     max-height: 255px; }
   .car-list__title__top {
     width: 230px;
@@ -7497,7 +7531,9 @@ label {
       padding-top: 5px; }
   .main-news__body {
     padding-left: 15px;
-    padding-right: 15px; }
+    padding-right: 15px;
+    margin-left: -15px;
+    margin-right: -15px; }
   .main-news__block {
     max-width: inherit; }
     .main-news__block:hover .main-news__text {
@@ -7527,11 +7563,22 @@ label {
       width: 143px; }
   .order-row__bottom {
     padding-bottom: 50px; }
-  .order-carousel .owl-item {
-    width: 1170px !important; }
+  .order-carousel {
+    padding: 0; }
+    .order-carousel .owl-item {
+      width: 1170px !important; }
   .owl-controls {
     display: block; }
   .order-carousel:hover .owl-controls {
-    opacity: 1; } }
+    opacity: 1; }
+  .order-row__form {
+    width: 1042px !important;
+    margin: 0 auto; }
+    .order-row__form .col-md-6 {
+      width: auto; }
+    .order-row__form .col-md-6.col-order-right {
+      width: 585px !important; }
+    .order-row__form .form-checkbox {
+      width: 215px; } }
 
 /*# sourceMappingURL=main.css.map */

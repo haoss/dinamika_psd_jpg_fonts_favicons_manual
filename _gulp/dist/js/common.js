@@ -114,6 +114,12 @@ $(document).ready(function(){
     e.preventDefault();
     $('#order-row__bottom').toggleClass('active');
     $(this).toggleClass('active');
+
+    if ($(this).find('em').html() == 'Раскрыть фильтр') {
+      $(this).find('em').html('Свернуть фильтр')
+    } else {
+      $(this).find('em').html('Раскрыть фильтр')
+    }
   })
 
   // Styler
@@ -151,6 +157,9 @@ $(document).ready(function(){
   } catch(err) {
 
   };
+
+  // Datepicker
+  $('#input-datepicker').data('datepicker')
 
   // simpleForm version 2015-09-23 14:30 GMT +2
   simpleForm('form.form-callback');
