@@ -189,14 +189,19 @@ html(lang="ru")
       
       // Carousel
       .order-carousel
+        
+        .order-carousel__top
+          .container
+            .order-carousel__background
+            .popup__header
+              .h1 ПОПУЛЯРНЫЕ АВТОМОБИЛИ
+            
         #order-carousel__body.order-carousel__body
           
           - for (var i=1; i<7; i++) {
             .order-carousel__block
               .popup__order
                 div
-                  .popup__header
-                    .h1 ПОПУЛЯРНЫЕ АВТОМОБИЛИ
                     
                   .popup__order__img
                     img(src="./tmp/cars/cars-" + i + "-big.png", alt="").img-responsive

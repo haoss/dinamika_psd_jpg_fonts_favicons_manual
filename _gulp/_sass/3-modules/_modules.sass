@@ -977,7 +977,7 @@
     position: absolute
     opacity: 0
     transform: translateY(-130%)
-    transition: transform 0.3s ease-out
+    transition: transform 0.3s ease-out 0.1s
     left: 3px
     top: 3px
     right: 3px
@@ -1155,6 +1155,7 @@
 .order-carousel
   padding: 0 15px
   background: $color-gray
+  position: relative
   &__body
     position: relative
     z-index: 100 !important
@@ -1162,12 +1163,27 @@
   &__block
     // margin: 0 15px
     position: relative
-    padding: 50px 10px 0 10px
-    transition: all 0.3s ease
+    padding: 220px 10px 0 10px
+    // transition: all 0.3s ease
     .popup__header
       opacity: 0
-      transition: all 0.2s linear
+      // transition: all 0.2s linear
     // background-color: $color-gray
+
+  &__top
+    position: absolute
+    width: 100%
+    left: 0
+    padding-top: 60px
+    height: 100%
+
+  &__background
+    position: absolute
+    height: 100%
+    background-color: $color-lightgray
+    left: 15px
+    top: 0
+    width: calc(100% - 30px)
 
   .popup__order__img
     img
@@ -1175,23 +1191,23 @@
       width: auto !important
   .popup__order__bottom
     opacity: 0
-    transition: all 0.2s linear
+    // transition: all 0.2s linear
   .popup__order__info
     opacity: 0
-    transition: all 0.2s linear
+    // transition: all 0.2s linear
 
 .owl-item
   &.center
     .order-carousel__block
-      background-color: $color-lightgray
+      // background-color: $color-lightgray
       .popup__header
         opacity: 1
     .popup__order__bottom
       opacity: 1
-      transition: all 0.7s linear
+      // transition: all 0.7s linear
     .popup__order__info
       opacity: 1
-      transition: all 0.7s linear
+      // transition: all 0.7s linear
 
 
 /**/

@@ -143,7 +143,13 @@ $(document).ready(function(){
         autoWidth: true,
         merge: true,
         center: true,
-        loop: true
+        loop: true,
+        mouseDrag: false,
+        touchDrag: false,
+        dots: false,
+        smartSpeed: 150,
+        animateOut: 'slideOutDown',
+        animateIn: 'flipInX',
       }
     }
   })
