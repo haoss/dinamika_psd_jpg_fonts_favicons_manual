@@ -152,17 +152,7 @@ $(document).ready(function(){
         animateIn: 'flipInX',
       }
     }
-  })
-
-  // Chrome Smooth Scroll
-  try {
-    $.browserSelector();
-    if($("html").hasClass("chrome")) {
-        $.smoothScroll();
-    }
-  } catch(err) {
-
-  };
+  });
 
   // Datepicker
   $('#input-datepicker').data('datepicker')
